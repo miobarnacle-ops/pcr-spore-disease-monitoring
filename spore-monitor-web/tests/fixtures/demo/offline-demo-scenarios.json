@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "kind": "offline_demo_scenarios",
+  "source_mode": "mock_or_replay",
+  "scenarios": [
+    { "id": "normal-replay", "title": "正常任务回放", "mode": "replay", "fixture": "../contracts/replay-normal.json", "expected": "loaded → sampling" },
+    { "id": "rtk-degraded", "title": "RTK 降级", "mode": "mock", "fault": "rtk_degraded", "expected": "rtk.state=float" },
+    { "id": "low-battery", "title": "低电量", "mode": "mock", "fault": "low_battery", "expected": "battery.low=true" },
+    { "id": "obstacle-stop", "title": "障碍停车", "mode": "mock", "fault": "obstacle_stop", "expected": "mission=paused; scan.obstacle_stop=true" },
+    { "id": "sampler-failed", "title": "采样失败", "mode": "mock", "fault": "sampler_failed", "expected": "mission=failed" },
+    { "id": "disconnect-recovery", "title": "断联与恢复", "mode": "mock", "fault": "disconnect", "recovery": "clear_fault", "expected": "connected=false → true" }
+  ]
+}

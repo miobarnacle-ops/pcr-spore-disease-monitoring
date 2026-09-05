@@ -1,0 +1,15 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1788263175.889516423] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1788263175.913202751] [rosbag2_storage]: Opened database '/ws/results/garden_map_bag/garden_map_bag_0.db3' for READ_WRITE.
+[INFO] [1788263175.920431112] [rosbag2_recorder]: Listening for topics...
+[INFO] [1788263175.920643035] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1788263175.927622605] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1788263175.930648843] [rosbag2_recorder]: Subscribed to topic '/scan'
+[INFO] [1788263175.932996056] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1788263175.937067987] [rosbag2_recorder]: Subscribed to topic '/odometry/filtered'
+[INFO] [1788263175.939666379] [rosbag2_recorder]: Subscribed to topic '/odom'
+[INFO] [1788263175.941490588] [rosbag2_recorder]: Subscribed to topic '/imu/data_raw'
+[INFO] [1788263175.943494945] [rosbag2_recorder]: Subscribed to topic '/battery_state'
+[INFO] [1788263175.943909164] [rosbag2_recorder]: Recording...
+[INFO] [1788263775.507831238] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1788263775.511672555] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1788263775.511774902] [rosbag2_recorder]: Recording stopped

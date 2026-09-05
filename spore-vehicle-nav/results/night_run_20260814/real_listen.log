@@ -1,0 +1,13 @@
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_014738_960912_listen
+frames= 24.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.08V
+frames= 20.2Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.09V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.10V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.10V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.11V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.11V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.12V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.13V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.13V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.13V
+Captured 200 valid frames (19.9 Hz average)

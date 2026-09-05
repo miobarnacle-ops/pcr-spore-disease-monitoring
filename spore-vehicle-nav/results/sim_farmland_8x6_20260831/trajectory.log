@@ -1,0 +1,11 @@
+1788155457.094 waypoints=9 speed=0.200 tolerance=0.180
+1788155490.295 reached index=0 target=(3.00,-0.71) pose=(2.82,-0.71)
+1788155510.094 reached index=1 target=(3.00,2.20) pose=(2.91,2.05)
+1788155550.295 reached index=2 target=(-3.00,2.20) pose=(-2.85,2.12)
+1788155579.695 reached index=3 target=(-3.00,-2.20) pose=(-2.92,-2.05)
+1788155619.995 reached index=4 target=(3.00,-2.20) pose=(2.85,-2.11)
+1788155638.995 reached index=5 target=(3.00,0.71) pose=(2.90,0.57)
+1788155679.195 reached index=6 target=(-3.00,0.71) pose=(-2.86,0.60)
+1788155687.795 reached index=7 target=(-3.00,-0.71) pose=(-2.90,-0.57)
+1788155693.695 reached index=8 target=(-2.00,-0.71) pose=(-2.14,-0.61)
+1788155693.695 completed all mapping waypoints

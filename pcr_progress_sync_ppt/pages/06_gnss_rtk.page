@@ -1,0 +1,96 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这页要把普通 GNSS 和 RTK 彻底分开。ATGM336H 的软件适配已经完成，但硬件能力不满足 0.5 米指标；目前 RTK 采购、差分服务和融合链路都没有完成证据。
+elements:
+  - elementId: p6-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: ATGM336H 只能做普通 GNSS，RTK 精定位链路尚未启动
+  - elementId: p6-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 当前模块：NMEA 解析 + ROS 2 发布；目标模块：多频 RTK + 差分 + 全局融合
+  - elementId: p6-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p6-table
+    elementType: table
+    bounds: [60, 130, 585, 270]
+    columnWidths: [0.22, 0.39, 0.39]
+    rowHeights: [0.17, 0.17, 0.17, 0.17, 0.16, 0.16]
+    style: "$default"
+    rows:
+      - - text: "维度"
+        - text: "当前 ATGM336H"
+        - text: "比赛级目标"
+      - - text: "定位"
+        - text: "单频单点 GNSS"
+        - text: "多频 RTK Float/Fix"
+      - - text: "差分"
+        - text: "无 RTCM / CORS 链路"
+        - text: "CORS/NTRIP 或自建基站"
+      - - text: "航向"
+        - text: "普通 NMEA 航向"
+        - text: "双天线或稳定融合航向"
+      - - text: "软件"
+        - text: "GGA/GLL/VTG、/fix、ENU"
+        - text: "RTK 状态、质量和全局融合"
+      - - text: "串口"
+        - text: "/dev/ttyUSB0；9600 baud"
+        - text: "需与雷达分配专用串口"
+  - elementId: p6-conclusion-mark
+    elementType: shape
+    bounds: [690, 148, 10, 122]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p6-conclusion
+    elementType: text
+    bounds: [720, 145, 180, 132]
+    content:
+      style: "$section"
+      fontSize: 20
+      lineHeight: 1.35
+      text: |
+        当前结论
+
+        普通 GNSS 软件包已完成，
+        但不能证明
+        定位误差 < 0.5 m。
+  - elementId: p6-bottom-rule
+    elementType: line
+    bounds: [60, 424, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p6-bottom
+    elementType: text
+    bounds: [60, 440, 840, 36]
+    content:
+      style: "$body"
+      text: 下一步：先确定 RTK 接收机、天线、差分服务和独立真值方案，再做现场接入与融合误差统计。
+  - elementId: p6-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 06 / 11
+

@@ -1,0 +1,111 @@
+pageType: final
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  最后一页用于组内确认任务和分工。优先级是先完成安全和正式证据，再补真实采样、后端和比赛指标。结束时明确需要谁确认 RTK、谁负责现场、谁负责采样器和 Web 提交。
+elements:
+  - elementId: p11-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 下一阶段先补安全、RTK和现场证据，再补业务闭环
+  - elementId: p11-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 组内需要确认：责任人、现场时间、设备采购、证据格式和代码提交节点
+  - elementId: p11-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p11-left-title
+    elementType: text
+    bounds: [60, 130, 380, 30]
+    content:
+      style: "$section"
+      fontSize: 19
+      text: P0：安全与正式证据
+  - elementId: p11-left-line
+    elementType: line
+    bounds: [60, 169, 380, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p11-left
+    elementType: text
+    bounds: [60, 184, 380, 238]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.45
+      text: |
+        1. 修复并复测固件 failsafe。
+        2. 完成物理急停和现场低速安全流程。
+        3. 完成多频 RTK、差分服务和天线方案。
+        4. 小花园正式建图、路线、重复运行和 rosbag。
+        5. 建立独立真值，输出定位/横向误差 P95。
+  - elementId: p11-right-title
+    elementType: text
+    bounds: [520, 130, 380, 30]
+    content:
+      style: "$section"
+      fontSize: 19
+      text: P1/P2：功能闭环与比赛材料
+  - elementId: p11-right-line
+    elementType: line
+    bounds: [520, 169, 380, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p11-right
+    elementType: text
+    bounds: [520, 184, 380, 238]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.45
+      text: |
+        1. 冻结采样器接口和 sample_id 数据链路。
+        2. 打通采样—PCR—位置绑定。
+        3. 接入环境传感器、相机和视频。
+        4. Web 从 localStorage 迁移到后端存储。
+        5. 整理并提交 Web 当前整合代码。
+        6. 用真实样本验证准确率和 3–7 天预警。
+  - elementId: p11-bottom
+    elementType: shape
+    bounds: [60, 445, 840, 42]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p11-bottom-text
+    elementType: text
+    bounds: [78, 454, 800, 22]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: 近期交付物：failsafe 复测记录｜RTK 决策｜小花园 rosbag｜独立真值误差｜采样器接口
+  - elementId: p11-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 11 / 11
+

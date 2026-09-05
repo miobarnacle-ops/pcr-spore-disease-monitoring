@@ -1,0 +1,213 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这页按日期快速回顾最近进度。组内同步时建议说明：8 月 26 日之前主要是基础栈，8 月 30 日之后进入整合和现场取证；9 月 4 日已经统一车辆侧主仓库。
+elements:
+  - elementId: p10-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 进度时间线：基础栈已完成，当前进入现场取证阶段
+  - elementId: p10-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 主要依据：车辆主审计更新记录、CHANGELOG、工作日志和 results 目录
+  - elementId: p10-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p10-axis
+    elementType: line
+    bounds: [165, 130, 2, 330]
+    viewBox: [1, 1]
+    points: "0.5,0 0.5,1"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p10-d1
+    elementType: shape
+    bounds: [158, 130, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d2
+    elementType: shape
+    bounds: [158, 176, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d3
+    elementType: shape
+    bounds: [158, 222, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d4
+    elementType: shape
+    bounds: [158, 268, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d5
+    elementType: shape
+    bounds: [158, 314, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d6
+    elementType: shape
+    bounds: [158, 360, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d7
+    elementType: shape
+    bounds: [158, 406, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-d8
+    elementType: shape
+    bounds: [158, 452, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: p10-t1
+    elementType: text
+    bounds: [60, 126, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 07/26–27
+  - elementId: p10-c1
+    elementType: text
+    bounds: [205, 122, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: 底盘协议、ROS 驱动、URDF、Gazebo、X3 Pro 驱动和 SLAM 初步完成
+  - elementId: p10-t2
+    elementType: text
+    bounds: [60, 172, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 08/14–15
+  - elementId: p10-c2
+    elementType: text
+    bounds: [205, 168, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: Pi 部署和夜间自动测试完成，8 小时 48 轮通过
+  - elementId: p10-t3
+    elementType: text
+    bounds: [60, 218, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 08/20
+  - elementId: p10-c3
+    elementType: text
+    bounds: [205, 214, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: X3 Pro 复验通过；failsafe 复测 1.309/1.409 s，超过 1.2 s 目标
+  - elementId: p10-t4
+    elementType: text
+    bounds: [60, 264, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 08/26
+  - elementId: p10-c4
+    elementType: text
+    bounds: [205, 260, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: 阶段 C/D 车辆代码落地；小尺度实车 6 类 9 次测试记录通过
+  - elementId: p10-t5
+    elementType: text
+    bounds: [60, 310, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 08/30
+  - elementId: p10-c5
+    elementType: text
+    bounds: [205, 306, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: Web W0–W9、契约、Mock/Replay、存储和 rosbridge 适配完成；实机静止接入恢复
+  - elementId: p10-t6
+    elementType: text
+    bounds: [60, 356, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 08/31
+  - elementId: p10-c6
+    elementType: text
+    bounds: [205, 352, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: 8 m × 6 m 模拟农田建图、地图保存和重复性比较通过
+  - elementId: p10-t7
+    elementType: text
+    bounds: [60, 402, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 09/01
+  - elementId: p10-c7
+    elementType: text
+    bounds: [205, 398, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: 单垄场地建图和 U 形掉头成功，航向漂移约 0.2°
+  - elementId: p10-t8
+    elementType: text
+    bounds: [60, 448, 88, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [right, middle]
+      text: 09/04
+  - elementId: p10-c8
+    elementType: text
+    bounds: [205, 444, 690, 34]
+    content:
+      style: "$bodySmall"
+      text: 车辆运行所需代码、驱动、仿真地图和交接资料统一同步到 spore-vehicle-nav
+  - elementId: p10-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 10 / 11
+

@@ -1,0 +1,46 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+**/HANDOVER_PRIVATE.md
+**/*PRIVATE_HANDOVER*
+**/*private*
+**/*secret*
+**/*credential*
+**/*.pem
+**/*.key
+**/.openai/
+
+# Local agent/session exports may contain credentials or private operational history.
+/08262204.json
+/08301247.json
+
+# Regenerable dependencies and build outputs
+node_modules/
+.next/
+.venv/
+build/
+install/
+log/
+dist/
+coverage/
+.wrangler/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+**/.vendor/ydlidar_sdk_build/
+**/.vendor/ydlidar_sdk_install/
+*.pyc
+*.pid
+.DS_Store
+揭榜挂帅.zip
+
+# Keep vendored lidar source; generated SDK build/install trees remain ignored.
+!spore-vehicle-nav/.vendor/
+!spore-vehicle-nav/.vendor/YDLidar-SDK/
+!spore-vehicle-nav/.vendor/YDLidar-SDK/**
+!spore-patrol-robot-feature-lidar/.vendor/
+!spore-patrol-robot-feature-lidar/.vendor/YDLidar-SDK/
+!spore-patrol-robot-feature-lidar/.vendor/YDLidar-SDK/**

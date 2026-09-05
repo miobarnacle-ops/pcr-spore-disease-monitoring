@@ -1,0 +1,49 @@
+{
+  "horizons": [
+    {
+      "horizonHours": 72,
+      "nObservations": 30,
+      "gaussian": {
+        "rmseLog10": 0.9281025518177495,
+        "biasLog10": -0.7283462484484681
+      },
+      "eulerian": {
+        "rmseLog10": 0.678261538548611,
+        "biasLog10": 0.37043305273353866
+      }
+    },
+    {
+      "horizonHours": 120,
+      "nObservations": 30,
+      "gaussian": {
+        "rmseLog10": 0.9410042186849987,
+        "biasLog10": -0.7434206676061538
+      },
+      "eulerian": {
+        "rmseLog10": 0.6787135801167755,
+        "biasLog10": 0.37170271583380426
+      }
+    },
+    {
+      "horizonHours": 168,
+      "nObservations": 30,
+      "gaussian": {
+        "rmseLog10": 0.9492076191385983,
+        "biasLog10": -0.7529352610195182
+      },
+      "eulerian": {
+        "rmseLog10": 0.6790129051868402,
+        "biasLog10": 0.37251183529892656
+      }
+    }
+  ],
+  "config": {
+    "dxTruth": 125,
+    "dxEuler": 250,
+    "q": 10000.0,
+    "windU": 2.0,
+    "kappa": 10.0,
+    "seed": 42
+  },
+  "notes": "Fine-grid Eulerian solution (dx=125 m) is treated as ground truth; coarse Eulerian (dx=250 m) and the closed-form Gaussian plume are benchmarked against it in log10 space."
+}

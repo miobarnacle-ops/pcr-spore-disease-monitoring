@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "frame_id": "field",
+  "coordinate_type": "local_enu",
+  "unit": "m",
+  "field_polygon_m": [[-0.4, -1.9], [5.5, -1.9], [5.5, 0.3], [-0.4, 0.3]],
+  "sampling_points": [],
+  "path": [
+    {"seq": 0, "x_m": 0.0, "y_m": 0.0, "yaw_rad": null, "type": "start",   "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 1, "x_m": 1.2, "y_m": 0.0, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 2, "x_m": 3.0, "y_m": 0.0, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 3, "x_m": 4.6, "y_m": 0.0, "yaw_rad": null, "type": "turn",    "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 4, "x_m": 5.2, "y_m": 0.0, "yaw_rad": null, "type": "turn",    "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 5, "x_m": 5.2, "y_m": -1.6, "yaw_rad": null, "type": "turn",   "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 6, "x_m": 4.6, "y_m": -1.6, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 7, "x_m": 1.6, "y_m": -1.6, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 8, "x_m": 1.2, "y_m": -1.6, "yaw_rad": null, "type": "turn",   "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 9, "x_m": 0.8, "y_m": -1.6, "yaw_rad": null, "type": "turn",   "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 10, "x_m": 0.8, "y_m": 0.0, "yaw_rad": null, "type": "turn",   "round": 1, "sample_id": null, "speed_limit_mps": 0.08, "tolerance_m": 0.35},
+    {"seq": 11, "x_m": 0.0, "y_m": 0.0, "yaw_rad": null, "type": "transit","round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30}
+  ]
+}

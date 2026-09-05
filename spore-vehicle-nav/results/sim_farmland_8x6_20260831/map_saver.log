@@ -1,0 +1,16 @@
+[INFO] [1788155693.917440286] [map_saver]: 
+	map_saver lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1788155693.917515624] [map_saver]: Creating
+[INFO] [1788155693.917552734] [map_saver]: Configuring
+[INFO] [1788155693.918042628] [map_saver]: Saving map from 'map' topic to '<REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260831_135053_sim_farmland_8x6/sim_farmland_8x6' file
+[WARN] [1788155693.918055413] [map_saver]: Free threshold unspecified. Setting it to default value: 0.250000
+[WARN] [1788155693.918061632] [map_saver]: Occupied threshold unspecified. Setting it to default value: 0.650000
+[WARN] [1788155693.929466307] [map_io]: Image format unspecified. Setting it to: pgm
+[INFO] [1788155693.929507173] [map_io]: Received a 157 X 117 map @ 0.05 m/pix
+[INFO] [1788155693.943234409] [map_io]: Writing map occupancy data to <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260831_135053_sim_farmland_8x6/sim_farmland_8x6.pgm
+[INFO] [1788155693.943534521] [map_io]: Writing map metadata to <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260831_135053_sim_farmland_8x6/sim_farmland_8x6.yaml
+[INFO] [1788155693.943609765] [map_io]: Map saved
+[INFO] [1788155693.943615131] [map_saver]: Map saved successfully
+[INFO] [1788155693.943929086] [map_saver]: Destroying

@@ -1,0 +1,132 @@
+{
+  "diseases": [
+    {
+      "diseaseId": "wheat_stripe_rust",
+      "diseaseName": "小麦条锈病",
+      "tempMin": 8.0,
+      "tempMax": 16.0,
+      "tempOpt": 12.0,
+      "dewHoursMin": 6.0,
+      "rhThreshold": 80.0,
+      "latentPeriodDays": 14.0,
+      "citation": {
+        "authors": "Chen X.",
+        "year": 2005,
+        "title": "Epidemiology and control of stripe rust [Puccinia striiformis f. sp. tritici] on wheat",
+        "source": "Plant Disease 89:992-1015"
+      }
+    },
+    {
+      "diseaseId": "wheat_fusarium",
+      "diseaseName": "小麦赤霉病",
+      "tempMin": 15.0,
+      "tempMax": 30.0,
+      "tempOpt": 25.0,
+      "dewHoursMin": 12.0,
+      "rhThreshold": 85.0,
+      "latentPeriodDays": 7.0,
+      "citation": {
+        "authors": "Parry D.W. et al.",
+        "year": 1995,
+        "title": "Fusarium ear blight (scab) in small grain cereals: a review",
+        "source": "Plant Pathology 44:207-238"
+      }
+    },
+    {
+      "diseaseId": "wheat_powdery",
+      "diseaseName": "小麦白粉病",
+      "tempMin": 10.0,
+      "tempMax": 25.0,
+      "tempOpt": 20.0,
+      "dewHoursMin": 0.0,
+      "rhThreshold": 65.0,
+      "latentPeriodDays": 8.0,
+      "citation": {
+        "authors": "Agrios G.N.",
+        "year": 2005,
+        "title": "Plant Pathology, 5th edition (powdery mildew epidemiology)",
+        "source": "Plant Pathology 5th ed Elsevier"
+      }
+    },
+    {
+      "diseaseId": "maize_northern_blight",
+      "diseaseName": "玉米大斑病",
+      "tempMin": 18.0,
+      "tempMax": 27.0,
+      "tempOpt": 23.0,
+      "dewHoursMin": 8.0,
+      "rhThreshold": 90.0,
+      "latentPeriodDays": 10.0,
+      "citation": {
+        "authors": "White D.G. ed.",
+        "year": 1999,
+        "title": "Compendium of Corn Diseases",
+        "source": "Compendium of Corn Diseases APS Press"
+      }
+    },
+    {
+      "diseaseId": "maize_rust",
+      "diseaseName": "玉米锈病",
+      "tempMin": 16.0,
+      "tempMax": 25.0,
+      "tempOpt": 20.0,
+      "dewHoursMin": 6.0,
+      "rhThreshold": 85.0,
+      "latentPeriodDays": 10.0,
+      "citation": {
+        "authors": "White D.G. ed.",
+        "year": 1999,
+        "title": "Compendium of Corn Diseases (Puccinia sorghi)",
+        "source": "Compendium of Corn Diseases APS Press"
+      }
+    },
+    {
+      "diseaseId": "apple_ring_rot",
+      "diseaseName": "苹果轮纹病",
+      "tempMin": 20.0,
+      "tempMax": 30.0,
+      "tempOpt": 26.0,
+      "dewHoursMin": 8.0,
+      "rhThreshold": 85.0,
+      "latentPeriodDays": 14.0,
+      "citation": {
+        "authors": "Jones A.L. Aldwinckle H.S. eds.",
+        "year": 1990,
+        "title": "Compendium of Apple and Pear Diseases",
+        "source": "Compendium of Apple and Pear Diseases APS Press"
+      }
+    },
+    {
+      "diseaseId": "apple_scab",
+      "diseaseName": "苹果黑星病",
+      "tempMin": 6.0,
+      "tempMax": 24.0,
+      "tempOpt": 18.0,
+      "dewHoursMin": 9.0,
+      "rhThreshold": 90.0,
+      "latentPeriodDays": 10.0,
+      "citation": {
+        "authors": "MacHardy W.E.",
+        "year": 1996,
+        "title": "Apple Scab: Biology, Epidemiology, and Management",
+        "source": "Apple Scab: Biology Epidemiology and Management APS Press"
+      }
+    },
+    {
+      "diseaseId": "grape_downy",
+      "diseaseName": "葡萄霜霉病",
+      "tempMin": 15.0,
+      "tempMax": 25.0,
+      "tempOpt": 22.0,
+      "dewHoursMin": 4.0,
+      "rhThreshold": 95.0,
+      "latentPeriodDays": 6.0,
+      "citation": {
+        "authors": "Gessler C. Pertot I. Perazzolli M.",
+        "year": 2011,
+        "title": "Plasmopara viticola: a review of knowledge on management and damage",
+        "source": "Phytopathologia Mediterranea 50:3-44"
+      }
+    }
+  ]
+}

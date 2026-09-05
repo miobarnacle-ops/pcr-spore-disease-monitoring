@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+
+# ROS 2 build/run artifacts
+install/
+build/
+log/
+.vendor/
+*.bag
+*.db3
+
+# Local results: keep evidence archives (logs, routes) tracked, but drop raw bags later
+!results/
+
+# Editor / OS
+.DS_Store
+*.swp

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "name": "simulated_farmland_8x6_v1",
+  "coordinate_frame": {
+    "name": "map",
+    "x_axis": "row direction",
+    "y_axis": "left of +x when viewed from above",
+    "origin": "field geometric center",
+    "units": "m"
+  },
+  "field": {
+    "length_m": 8.0,
+    "width_m": 6.0,
+    "x_min_m": -4.0,
+    "x_max_m": 4.0,
+    "y_min_m": -3.0,
+    "y_max_m": 3.0,
+    "soil_thickness_m": 0.10
+  },
+  "rows": {
+    "orientation": "x",
+    "count": 3,
+    "center_y_m": [-1.42, 0.0, 1.42],
+    "length_m": 4.80,
+    "width_m": 0.22,
+    "height_m": 0.50,
+    "required_clear_corridor_m": 1.20,
+    "headland_min_m": 1.50,
+    "headland_target_m": 1.60
+  },
+  "robot": {
+    "footprint_length_m": 0.34,
+    "footprint_width_m": 0.40,
+    "lidar_height_m": 0.35,
+    "lidar_min_range_m": 0.12,
+    "lidar_max_range_m": 8.0
+  },
+  "start": {
+    "x_m": -2.00,
+    "y_m": -0.71,
+    "yaw_rad": 0.0,
+    "corridor": "between row 1 and row 2"
+  },
+  "boundary": {
+    "wall_thickness_m": 0.12,
+    "wall_height_m": 0.60,
+    "inset_m": 0.06
+  },
+  "mapping": {
+    "first_pass": "no_static_obstacle",
+    "resolution_m": 0.05,
+    "coverage_tolerance_m": 0.50,
+    "min_known_fraction": 0.25,
+    "min_occupied_fraction": 0.005
+  },
+  "follow_up_scenarios": [
+    "farmland_8x6_static_obstacle_v1",
+    "farmland_8x6_repeated_route_v1"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "frame_id": "field",
+  "coordinate_type": "local_enu",
+  "unit": "m",
+  "field_polygon_m": [[-0.4, -0.4], [1.9, -0.4], [1.9, 1.9], [-0.4, 1.9]],
+  "sampling_points": [
+    {"id": "S3", "x_m": 0.0, "y_m": 0.0}
+  ],
+  "path": [
+    {"seq": 0, "x_m": 0.0, "y_m": 0.0, "yaw_rad": null, "type": "start",    "round": 1, "sample_id": null, "speed_limit_mps": 0.12, "tolerance_m": 0.25},
+    {"seq": 1, "x_m": 1.5, "y_m": 0.0, "yaw_rad": null, "type": "turn",     "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 2, "x_m": 1.5, "y_m": 1.5, "yaw_rad": null, "type": "turn",     "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 3, "x_m": 0.0, "y_m": 1.5, "yaw_rad": null, "type": "turn",     "round": 1, "sample_id": null, "speed_limit_mps": 0.10, "tolerance_m": 0.30},
+    {"seq": 4, "x_m": 0.0, "y_m": 0.0, "yaw_rad": null, "type": "sampling", "round": 1, "sample_id": "S3",  "speed_limit_mps": 0.12, "tolerance_m": 0.30}
+  ]
+}

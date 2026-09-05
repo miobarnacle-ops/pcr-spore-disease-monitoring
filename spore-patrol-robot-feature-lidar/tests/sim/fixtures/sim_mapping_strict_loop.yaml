@@ -1,0 +1,42 @@
+slam_toolbox:
+  ros__parameters:
+    # Diagnostic profile: keep loop closure enabled but require a stronger,
+    # shorter-range match than the original permissive profile.
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+    scan_topic: /scan
+    mode: mapping
+    use_map_saver: true
+    use_scan_matching: true
+    use_scan_barycenter: true
+    do_loop_closing: true
+    minimum_travel_distance: 0.08
+    minimum_travel_heading: 0.087
+    transform_publish_period: 0.05
+    map_update_interval: 1.0
+    resolution: 0.05
+    restamp_tf: false
+    min_laser_range: 0.12
+    max_laser_range: 8.0
+    minimum_time_interval: 0.08
+    transform_timeout: 0.20
+    tf_buffer_duration: 30.0
+    stack_size_to_use: 40000000
+    enable_interactive_mode: false
+    link_match_minimum_response_fine: 0.20
+    link_scan_maximum_distance: 1.0
+    loop_search_maximum_distance: 1.5
+    loop_match_minimum_chain_size: 30
+    loop_match_maximum_variance_coarse: 1.0
+    loop_match_minimum_response_coarse: 0.60
+    loop_match_minimum_response_fine: 0.70
+    correlation_search_space_dimension: 0.5
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.1
+    loop_search_space_dimension: 4.0
+    loop_search_space_resolution: 0.05
+    loop_search_space_smear_deviation: 0.03
+    distance_variance_penalty: 0.5
+    angle_variance_penalty: 1.0
+    use_response_expansion: true

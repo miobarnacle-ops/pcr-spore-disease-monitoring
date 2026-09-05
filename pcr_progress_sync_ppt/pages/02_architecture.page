@@ -1,0 +1,203 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页只说明当前工程边界和主仓库，不把历史仓库、资料压缩包和当前主线混在一起。车辆侧当前以 spore-vehicle-nav 为准，Web 侧以 spore-monitor-web 为准。
+elements:
+  - elementId: p2-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 当前工程已经分成四条主线，车辆主仓库已统一
+  - elementId: p2-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 架构边界：Web 负责编排与展示；车辆端负责实时控制、定位、避障和底层安全
+  - elementId: p2-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-flow-1
+    elementType: line
+    bounds: [280, 170, 90, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-flow-2
+    elementType: line
+    bounds: [540, 170, 90, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-flow-3
+    elementType: line
+    bounds: [755, 225, 1, 50]
+    viewBox: [1, 1]
+    points: "0.5,0 0.5,1"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-flow-4
+    elementType: line
+    bounds: [630, 350, 1, 50]
+    viewBox: [1, 1]
+    points: "0.5,0 0.5,1"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-web-node
+    elementType: shape
+    bounds: [65, 135, 215, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-route-node
+    elementType: shape
+    bounds: [370, 135, 170, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-vehicle-node
+    elementType: shape
+    bounds: [630, 125, 250, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-data-node
+    elementType: shape
+    bounds: [505, 400, 250, 65]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p2-web-text
+    elementType: text
+    bounds: [80, 151, 185, 38]
+    content:
+      style: "$body"
+      align: [center, middle]
+      bold: true
+      text: Web 控制台
+  - elementId: p2-web-sub
+    elementType: text
+    bounds: [80, 185, 185, 18]
+    content:
+      style: "$bodySmall"
+      align: [center, top]
+      color: "$muted"
+      text: 规划 / 监控 / 分析
+  - elementId: p2-route-text
+    elementType: text
+    bounds: [382, 151, 146, 38]
+    content:
+      style: "$body"
+      align: [center, middle]
+      bold: true
+      text: route_v1.json
+  - elementId: p2-route-sub
+    elementType: text
+    bounds: [382, 185, 146, 18]
+    content:
+      style: "$bodySmall"
+      align: [center, top]
+      color: "$muted"
+      text: 米制 / local_enu
+  - elementId: p2-vehicle-text
+    elementType: text
+    bounds: [648, 140, 215, 42]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: ROS 车辆端
+  - elementId: p2-vehicle-sub
+    elementType: text
+    bounds: [648, 183, 215, 26]
+    content:
+      style: "$bodySmall"
+      color: "#FFFFFF"
+      align: [center, middle]
+      text: 底盘 / 雷达 / EKF / SLAM / 跟踪
+  - elementId: p2-data-text
+    elementType: text
+    bounds: [520, 411, 220, 40]
+    content:
+      style: "$body"
+      align: [center, middle]
+      bold: true
+      text: 环境 / 孢子 / PCR / 遥测
+  - elementId: p2-data-sub
+    elementType: text
+    bounds: [520, 444, 220, 18]
+    content:
+      style: "$bodySmall"
+      align: [center, top]
+      color: "$muted"
+      text: 风险预测 / 热力图 / 告警 / 报告
+  - elementId: p2-branches
+    elementType: text
+    bounds: [65, 270, 400, 160]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.4
+      text: |
+        当前目录中的主线仓库
+
+        车辆主线：spore-vehicle-nav
+        Web 主线：spore-monitor-web
+        历史基础：spore-patrol-robot
+        雷达快照：spore-patrol-robot-feature-lidar
+  - elementId: p2-repo-status
+    elementType: text
+    bounds: [65, 455, 400, 42]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: 车辆仓库干净；Web 最新整合改动尚未提交；雷达快照无 Git。
+  - elementId: p2-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 02 / 11
+

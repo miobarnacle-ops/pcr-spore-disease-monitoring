@@ -1,0 +1,84 @@
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 1, "waypoint_seq": 1, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760576.1317778}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 1, "waypoint_seq": 1, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760577.131837}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 1, "waypoint_seq": 1, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760578.1317527}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 1, "waypoint_seq": 1, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760579.131789}
+---
+{"event": "state_changed", "state": "ARRIVED", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760579.2314372}
+---
+{"event": "waypoint_arrived", "state": "ARRIVED", "waypoint_seq": 1, "sample_id": null, "message": null, "timestamp": 1787760579.2314372}
+---
+{"event": "state_changed", "state": "SETTLING", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760579.2314372}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760579.2314372}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760580.1317623}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760581.131781}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760582.131776}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760583.131803}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760584.1317677}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760585.1317787}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760586.1317952}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 2, "waypoint_seq": 2, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760587.1317978}
+---
+{"event": "state_changed", "state": "ARRIVED", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760588.0314345}
+---
+{"event": "waypoint_arrived", "state": "ARRIVED", "waypoint_seq": 2, "sample_id": null, "message": null, "timestamp": 1787760588.0314345}
+---
+{"event": "state_changed", "state": "SETTLING", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760588.0314345}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760588.0314345}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760588.1317642}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760589.1317565}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760590.1317587}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760591.1317701}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760592.1317742}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760593.1317787}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760594.131787}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760595.1318007}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760596.1317904}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760597.1317987}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760598.1317606}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760599.1317346}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760600.1317656}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760601.1326253}
+---
+{"event": "state_changed", "state": "NAVIGATING", "waypoint_index": 3, "waypoint_seq": 3, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760602.1317554}
+---
+{"event": "state_changed", "state": "ARRIVED", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760602.331435}
+---
+{"event": "waypoint_arrived", "state": "ARRIVED", "waypoint_seq": 3, "sample_id": null, "message": null, "timestamp": 1787760602.331435}
+---
+{"event": "state_changed", "state": "SETTLING", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760602.331435}
+---
+{"event": "state_changed", "state": "TASK_FINISHED", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760602.331435}
+---
+{"event": "task_finished", "state": "TASK_FINISHED", "waypoint_seq": null, "sample_id": null, "message": null, "timestamp": 1787760602.331435}
+---
+{"event": "state_changed", "state": "TASK_FINISHED", "waypoint_index": 4, "waypoint_seq": null, "sample_id": null, "total_waypoints": 4, "obstacle_stop": false, "timestamp": 1787760603.1316473}
+---
+{"event": "state_changed", "state": "TASK_FINISHED", "waypoint_index": 4, "waypoint_seq": null, "sample_id": null, "total_waypoints": 4, "obstacle_stop": true, "timestamp": 1787760604.131655}
+---

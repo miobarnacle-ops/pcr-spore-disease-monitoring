@@ -1,0 +1,105 @@
+version: v2
+title: PCR 项目组内进度同步
+size: [960, 540]
+theme:
+  colors:
+    primary: "#111111"
+    accent: "#666666"
+    bg: "#FFFFFF"
+    text: "#1A1A1A"
+    muted: "#6B6B6B"
+    line: "#D6D6D6"
+    success: "#404040"
+    warning: "#777777"
+    danger: "#000000"
+    primarySoft: "#F3F3F3"
+    primaryTint: "#E7E7E7"
+    primaryDeep: "#000000"
+    accent3: "#4C4C4C"
+    accent4: "#858585"
+    accent5: "#A6A6A6"
+    accent6: "#C7C7C7"
+  textStyles:
+    title:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 29
+      color: "$text"
+      bold: true
+      lineHeight: 1.2
+    section:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 20
+      color: "$text"
+      bold: true
+      lineHeight: 1.25
+    body:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 15
+      color: "$text"
+      lineHeight: 1.35
+    bodySmall:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 12
+      color: "$text"
+      lineHeight: 1.25
+    muted:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 12
+      color: "$muted"
+      lineHeight: 1.3
+    metric:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 29
+      color: "$text"
+      bold: true
+      lineHeight: 1.1
+    inverse:
+      fontFamily: "LXGW Neo XiHei"
+      fontSize: 16
+      color: "#FFFFFF"
+      bold: true
+      lineHeight: 1.25
+  tableStyles:
+    default:
+      cellStyle:
+        fontFamily: "LXGW Neo XiHei"
+        fontSize: 12
+        color: "$text"
+        fill:
+          type: solid
+          color: "#FFFFFF"
+        border:
+          style: solid
+          width: 1
+          color: "$line"
+        align: [left, middle]
+      firstRowStyle:
+        fill:
+          type: solid
+          color: "$primary"
+        color: "#FFFFFF"
+        bold: true
+        align: [left, middle]
+      bodyStyles:
+        - fill:
+            type: solid
+            color: "$primarySoft"
+        - fill:
+            type: solid
+            color: "#FFFFFF"
+      rowOverColumn: true
+fonts:
+  body:
+    family: "LXGW Neo XiHei"
+pages:
+  - pages/01_overview.page
+  - pages/02_architecture.page
+  - pages/03_vehicle_base.page
+  - pages/04_slam_localization.page
+  - pages/05_route_mission.page
+  - pages/06_gnss_rtk.page
+  - pages/07_web_console.page
+  - pages/08_pcr_algorithm.page
+  - pages/09_integration_validation.page
+  - pages/10_timeline.page
+  - pages/11_blockers_next.page

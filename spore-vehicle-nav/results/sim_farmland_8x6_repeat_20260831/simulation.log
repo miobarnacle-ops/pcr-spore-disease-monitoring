@@ -1,0 +1,60 @@
+[INFO] [launch]: All log files can be found below /home/miobarnacle/.ros/log/2026-08-31-13-38-35-381419-miobarnacle-ThinkBook-16p-24832
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [24837]
+[INFO] [robot_state_publisher-2]: process started with pid [24839]
+[INFO] [spawn_entity.py-3]: process started with pid [24841]
+[INFO] [async_slam_toolbox_node-4]: process started with pid [24843]
+[robot_state_publisher-2] [INFO] [1788154715.854765948] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-2] [INFO] [1788154715.854864493] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-2] [INFO] [1788154715.854874860] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-2] [INFO] [1788154715.854882183] [robot_state_publisher]: got segment front_left_wheel_link
+[robot_state_publisher-2] [INFO] [1788154715.854889133] [robot_state_publisher]: got segment front_right_wheel_link
+[robot_state_publisher-2] [INFO] [1788154715.854895568] [robot_state_publisher]: got segment gnss_left_link
+[robot_state_publisher-2] [INFO] [1788154715.854901754] [robot_state_publisher]: got segment gnss_right_link
+[robot_state_publisher-2] [INFO] [1788154715.854907762] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-2] [INFO] [1788154715.854913743] [robot_state_publisher]: got segment laser_link
+[robot_state_publisher-2] [INFO] [1788154715.854919738] [robot_state_publisher]: got segment mast_link
+[robot_state_publisher-2] [INFO] [1788154715.854925796] [robot_state_publisher]: got segment payload_link
+[robot_state_publisher-2] [INFO] [1788154715.854931880] [robot_state_publisher]: got segment rear_left_wheel_link
+[robot_state_publisher-2] [INFO] [1788154715.854938274] [robot_state_publisher]: got segment rear_right_wheel_link
+[robot_state_publisher-2] [INFO] [1788154715.854944210] [robot_state_publisher]: got segment sensor_deck
+[async_slam_toolbox_node-4] [INFO] [1788154715.856849438] [slam_toolbox]: Node using stack size 40000000
+[spawn_entity.py-3] [INFO] [1788154715.870871758] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-3] [INFO] [1788154715.871048988] [spawn_entity]: Loading entity published on topic robot_description
+[spawn_entity.py-3] [INFO] [1788154715.872009088] [spawn_entity]: Waiting for entity xml on robot_description
+[async_slam_toolbox_node-4] [INFO] [1788154715.873108859] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[spawn_entity.py-3] [INFO] [1788154715.882659553] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-3] [INFO] [1788154715.882794044] [spawn_entity]: Waiting for service /spawn_entity
+[spawn_entity.py-3] [INFO] [1788154716.386118091] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-3] [INFO] [1788154716.659256843] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [spore_patrol_robot]
+[INFO] [spawn_entity.py-3]: process has finished cleanly [pid 24841]
+[gzserver-1] [INFO] [1788154716.782614798] [planar_drive]: Subscribed to [/cmd_vel]
+[gzserver-1] [INFO] [1788154716.783914979] [planar_drive]: Advertise odometry on [/odom]
+[gzserver-1] [INFO] [1788154716.784941921] [planar_drive]: Publishing odom transforms between [odom] and [base_footprint]
+[async_slam_toolbox_node-4] Info: clipped range threshold to be within minimum and maximum range!
+[async_slam_toolbox_node-4] Registering sensor: [Custom Described Lidar]
+[async_slam_toolbox_node-4] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[async_slam_toolbox_node-4] W0831 13:41:37.347218 24934 preprocessor.cc:62] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 24.  Bounding to maximum number available.
+[async_slam_toolbox_node-4] W0831 13:42:13.097169 24934 preprocessor.cc:62] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 24.  Bounding to maximum number available.
+[robot_state_publisher-2] [INFO] [1788154956.586543519] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[async_slam_toolbox_node-4] [INFO] [1788154956.586543309] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[async_slam_toolbox_node-4] Save To File <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260831_133835_sim_farmland_8x6/sim_farmland_8x6.posegraph 
+[async_slam_toolbox_node-4] Mapper <- Module
+[async_slam_toolbox_node-4] Mapper <- m_pSequentialScanMatcher
+[async_slam_toolbox_node-4] Mapper <- m_pGraph
+[async_slam_toolbox_node-4] MapperGraph <- Graph; Graph <- m_Edges; Graph <- m_Vertices
+[async_slam_toolbox_node-4] MapperGraph <- m_pMapper; MapperGraph <- m_pLoopScanMatcher; MapperGraph <- m_pTraversal
+[async_slam_toolbox_node-4] Mapper <- m_pMapperSensorManager
+[async_slam_toolbox_node-4] MapperSensorManager <- m_ScanManagers; MapperSensorManager <- m_Scans
+[async_slam_toolbox_node-4] Mapper <- m_Listeners
+[async_slam_toolbox_node-4] **Finished serializing Mapper**
+[async_slam_toolbox_node-4] Save To File
+[async_slam_toolbox_node-4] **Serializing Dataset**
+[async_slam_toolbox_node-4] Dataset <- m_SensorNameLookup
+[async_slam_toolbox_node-4] Dataset <- m_Data
+[async_slam_toolbox_node-4] Dataset <- m_Lasers
+[async_slam_toolbox_node-4] Dataset <- m_pDatasetInfo
+[async_slam_toolbox_node-4] **Finished serializing Dataset**
+[INFO] [robot_state_publisher-2]: process has finished cleanly [pid 24839]
+[INFO] [async_slam_toolbox_node-4]: process has finished cleanly [pid 24843]
+[INFO] [gzserver-1]: process has finished cleanly [pid 24837]

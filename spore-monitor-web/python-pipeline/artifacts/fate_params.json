@@ -1,0 +1,46 @@
+{
+  "defaults": {
+    "depositionVelocity": 0.0025,
+    "uvKillCoeff": 0.007,
+    "rainWashoutRate": 0.02857142857142857,
+    "reEmissionBase": 0.01,
+    "temperatureOptimum": 24.0,
+    "temperatureSigma": 6.0,
+    "humidityMin": 0.42,
+    "humidityOpt": 0.9,
+    "growthRateBase": 0.002,
+    "citation": {
+      "authors": "Aylor D.E.; Maddison A.C., Manners J.G.; Nicholson K.W.",
+      "year": 2001,
+      "title": "Estimating spore release rates using a Lagrangian stochastic simulation model; Sunlight and viability of urediniospores; particle resuspension (values inherit v0 engine baseline calibration)",
+      "source": "J. Appl. Meteorol. 40:1196-1208; Trans. Br. Mycol. Soc.; Atmos. Environ."
+    }
+  },
+  "calibrated": {
+    "depositionVelocity": 0.0025,
+    "uvKillCoeff": 0.018571428571428572,
+    "rainWashoutRate": 0.02857142857142857,
+    "reEmissionBase": 0.01,
+    "temperatureOptimum": 24,
+    "temperatureSigma": 6,
+    "humidityMin": 0.42,
+    "humidityOpt": 0.9,
+    "growthRateBase": 0.002,
+    "citation": {
+      "authors": "Aylor D.E.; Maddison A.C., Manners J.G.; Nicholson K.W.",
+      "year": 2001,
+      "title": "Estimating spore release rates using a Lagrangian stochastic simulation model; Sunlight and viability of urediniospores; particle resuspension (values inherit v0 engine baseline calibration)",
+      "source": "J. Appl. Meteorol. 40:1196-1208; Trans. Br. Mycol. Soc.; Atmos. Environ."
+    }
+  },
+  "fitReport": {
+    "rmseLog10": 0.01949925676598057,
+    "biasLog10": -9.562837343741748e-05,
+    "nObservations": 80,
+    "relativeErrors": {
+      "depositionVelocity": 0.0,
+      "uvKillCoeff": 1.653061224489796,
+      "reEmissionBase": 0.0
+    }
+  }
+}

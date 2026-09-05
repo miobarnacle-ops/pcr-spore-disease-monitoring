@@ -1,0 +1,120 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页同步底盘和树莓派部署。重点说明基础通信已经稳定，但底层 failsafe 仍然是红线问题。8 小时测试是架空测试，不能替代落地安全验收。
+elements:
+  - elementId: p3-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 底盘通信和 Pi 部署基本稳定，但安全 failsafe 未达标
+  - elementId: p3-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 硬件：R550 PLUS + C50C STM32 + Raspberry Pi 5 + X3 Pro
+  - elementId: p3-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p3-table
+    elementType: table
+    bounds: [60, 132, 545, 246]
+    columnWidths: [0.23, 0.47, 0.30]
+    rowHeights: [0.20, 0.20, 0.20, 0.20, 0.20]
+    style: "$default"
+    rows:
+      - - text: "层级"
+        - text: "接口 / 配置"
+        - text: "当前结果"
+      - - text: "STM32"
+        - text: "11 字节控制帧；24 字节反馈帧"
+        - text: "约 20 Hz"
+      - - text: "ROS"
+        - text: "/cmd_vel、/odom、IMU、电池、诊断、TF"
+        - text: "已发布"
+      - - text: "超时"
+        - text: "cmd_vel_timeout_s = 0.30"
+        - text: "输入过期输出零速度"
+      - - text: "部署"
+        - text: "Ubuntu 24.04.4 + Docker Humble；systemd"
+        - text: "8 包构建通过"
+  - elementId: p3-m1
+    elementType: text
+    bounds: [650, 142, 230, 44]
+    content:
+      style: "$metric"
+      text: 8 h / 48 轮
+  - elementId: p3-l1
+    elementType: line
+    bounds: [650, 194, 230, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 1
+      color: "$line"
+  - elementId: p3-t1
+    elementType: text
+    bounds: [650, 204, 230, 36]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: 夜间架空自动测试通过
+  - elementId: p3-m2
+    elementType: text
+    bounds: [650, 260, 230, 44]
+    content:
+      style: "$metric"
+      text: 20 Hz / 11.3 Hz
+  - elementId: p3-l2
+    elementType: line
+    bounds: [650, 312, 230, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 1
+      color: "$line"
+  - elementId: p3-t2
+    elementType: text
+    bounds: [650, 322, 230, 36]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: EKF /scan 静止接入频率
+  - elementId: p3-warning-rule
+    elementType: line
+    bounds: [60, 414, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 3
+      color: "$primary"
+  - elementId: p3-warning
+    elementType: text
+    bounds: [60, 430, 840, 42]
+    content:
+      style: "$body"
+      bold: true
+      text: |
+        failsafe 复测：1.309 s / 1.409 s，超过 1.2 s 目标。
+        结论：底盘最终能停下，但固件响应时间仍未满足严格安全验收。
+  - elementId: p3-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 03 / 11
+

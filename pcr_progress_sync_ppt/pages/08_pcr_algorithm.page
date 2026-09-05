@@ -1,0 +1,243 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页要讲清楚算法代码已经形成链路，但当前证据是离线和模拟验证。真实 PCR 实验、病害数据集和准确率报告不在当前成果范围内。
+elements:
+  - elementId: p8-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: PCR 与扩散预测链路已形成离线原型，真实实验数据仍缺失
+  - elementId: p8-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 数据来源：Python 软著参考源码 + Web 迁移增强；当前不等同于田间性能
+  - elementId: p8-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-a1
+    elementType: line
+    bounds: [180, 175, 20, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-a2
+    elementType: line
+    bounds: [325, 175, 20, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-a3
+    elementType: line
+    bounds: [470, 175, 20, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-a4
+    elementType: line
+    bounds: [615, 175, 20, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-a5
+    elementType: line
+    bounds: [760, 175, 20, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n1
+    elementType: shape
+    bounds: [60, 140, 120, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n2
+    elementType: shape
+    bounds: [200, 140, 125, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n3
+    elementType: shape
+    bounds: [345, 140, 125, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n4
+    elementType: shape
+    bounds: [490, 140, 125, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n5
+    elementType: shape
+    bounds: [635, 140, 125, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-n6
+    elementType: shape
+    bounds: [780, 140, 120, 70]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-t1
+    elementType: text
+    bounds: [68, 154, 104, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 环境 / 孢子 / PCR
+  - elementId: p8-t2
+    elementType: text
+    bounds: [208, 154, 109, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: Ct / 质量控制
+  - elementId: p8-t3
+    elementType: text
+    bounds: [353, 154, 109, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 多点融合
+  - elementId: p8-t4
+    elementType: text
+    bounds: [498, 154, 109, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: Euler / Gaussian
+  - elementId: p8-t5
+    elementType: text
+    bounds: [643, 154, 109, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 感染窗口
+  - elementId: p8-t6
+    elementType: text
+    bounds: [788, 154, 104, 40]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: 3 / 5 / 7 天
+  - elementId: p8-left
+    elementType: text
+    bounds: [60, 275, 385, 155]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.4
+      text: |
+        已实现
+
+        Ct→浓度和判定；LOD、离群值和多点融合；
+        粒子滤波源估计；扩散模型 A/B；
+        温度、湿度、叶面湿润时间和感染窗口。
+
+        粒子滤波源估计至少需要两个空间观测。
+  - elementId: p8-right
+    elementType: text
+    bounds: [505, 275, 395, 155]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.4
+      text: |
+        当前未证明
+
+        真实孢子采集、核酸实验、引物/探针验证、
+        电泳图、田间样本对照和病害准确率。
+
+        当前模型结果是模拟/离线结果，
+        不能直接表述为 90% 准确率或真实 3–7 天预警。
+  - elementId: p8-bottom-rule
+    elementType: line
+    bounds: [60, 452, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p8-bottom
+    elementType: text
+    bounds: [60, 466, 800, 25]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: 当前重点：先拿到真实 PCR/田间数据，再做模型标定和准确率验证。
+  - elementId: p8-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 08 / 11
+

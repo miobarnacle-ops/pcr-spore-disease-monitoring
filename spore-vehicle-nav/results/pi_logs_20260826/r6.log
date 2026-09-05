@@ -1,0 +1,22 @@
+[INFO] [1787762071.789711020] [spore_patrol_route_tracker]: loaded route /ws/routes/trial2_3m_straight.json: 4 waypoints, 31 smoothed points
+[INFO] [1787762071.799430907] [spore_patrol_route_tracker]: route tracker ready: odom=/odometry/filtered (fallback /odom), cmd_vel=/cmd_vel at 10.0 Hz
+[WARN] [1787762084.299857801] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.49 m < 0.50 m; halting
+[WARN] [1787762086.300030906] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1787762088.399693946] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1787762090.399770438] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+Traceback (most recent call last):
+  File "/ws/install/spore_patrol_route_validation/lib/spore_patrol_route_validation/route_tracker", line 33, in <module>
+    sys.exit(load_entry_point('spore-patrol-route-validation==0.1.0', 'console_scripts', 'route_tracker')())
+  File "/ws/install/spore_patrol_route_validation/lib/python3.10/site-packages/spore_patrol_route_validation/route_tracker_node.py", line 432, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 681, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

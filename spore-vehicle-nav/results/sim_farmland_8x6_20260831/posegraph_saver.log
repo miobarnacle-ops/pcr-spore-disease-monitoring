@@ -1,0 +1,5 @@
+requester: making request: slam_toolbox.srv.SerializePoseGraph_Request(filename='<REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260831_135053_sim_farmland_8x6/sim_farmland_8x6')
+
+response:
+slam_toolbox.srv.SerializePoseGraph_Response(result=0)
+

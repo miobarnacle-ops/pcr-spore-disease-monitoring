@@ -1,0 +1,101 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  Web 这一页同步当前能展示什么、数据从哪里来，以及为什么还不能称为生产系统。核心是功能页签已经齐全，但真实数据接入和后端持久化还没有完成。
+elements:
+  - elementId: p7-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: Web 控制台功能已齐全，当前以本地和模拟数据为主
+  - elementId: p7-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 工程：Next.js 16 + React 19；机器人数据：rosbridge + Mock/Replay
+  - elementId: p7-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p7-table
+    elementType: table
+    bounds: [60, 132, 535, 300]
+    columnWidths: [0.24, 0.76]
+    rowHeights: [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125]
+    style: "$default"
+    rows:
+      - - text: "页签"
+        - text: "当前功能"
+      - - text: "路径规划"
+        - text: "地块边界、路线生成、route_v1.json 导出"
+      - - text: "环境感知"
+        - text: "环境点位、模拟分布、阈值告警和扫描"
+      - - text: "PCR"
+        - text: "Ct、浓度、质量、LOD、离群值、融合和导出"
+      - - text: "病害识别"
+        - text: "8 类病害浏览器端颜色/纹理识别原型"
+      - - text: "趋势预测"
+        - text: "3/5/7 天风险、热力图、扩散模型和报告"
+      - - text: "监管告警"
+        - text: "告警状态、责任人、处置和趋势展示"
+      - - text: "机器人监控"
+        - text: "融合位姿、雷达、电池、诊断、任务状态、GNSS"
+  - elementId: p7-modes-title
+    elementType: text
+    bounds: [650, 132, 240, 28]
+    content:
+      style: "$section"
+      fontSize: 18
+      text: 数据模式
+  - elementId: p7-modes
+    elementType: text
+    bounds: [650, 172, 240, 190]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.45
+      text: |
+        Mock
+        确定性任务模拟；不连接实机，
+        不发布真实 /cmd_vel。
+
+        Replay
+        固定回放数据；只读。
+
+        rosbridge
+        读取车辆实时遥测；当前只读适配。
+  - elementId: p7-storage-rule
+    elementType: line
+    bounds: [650, 388, 240, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p7-storage
+    elementType: text
+    bounds: [650, 405, 240, 70]
+    content:
+      style: "$body"
+      bold: true
+      text: |
+        当前限制
+        localStorage 为主，
+        尚无正式后端数据库和文件服务。
+  - elementId: p7-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 07 / 11
+

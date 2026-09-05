@@ -1,0 +1,52 @@
+[INFO] [1788261985.293997306] [spore_patrol_route_tracker]: loaded route /ws/routes/pretest_single_ridge_uturn.json: 7 waypoints, 81 smoothed points
+[INFO] [1788261985.308554232] [spore_patrol_route_tracker]: route tracker ready: odom=/odometry/filtered (fallback /odom), cmd_vel=/cmd_vel at 10.0 Hz
+[WARN] [1788261998.409036927] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.49 m < 0.50 m; halting
+[WARN] [1788262000.409126620] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262002.509170195] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262004.509140840] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262006.509103207] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262008.609142189] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262010.709074984] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262012.709144426] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262014.809103973] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262016.909078139] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262019.009094639] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262021.109005375] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262023.109067774] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262025.209120916] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262027.309067073] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262029.309189907] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262031.409087818] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262033.509118823] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262035.609155505] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262037.709184839] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262039.709238923] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262041.809097459] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262043.909114165] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262045.909093708] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262048.009139016] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262050.109123583] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262052.209013490] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262054.209072819] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262056.209082119] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.42 m < 0.50 m; halting
+[WARN] [1788262058.209088365] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262060.309042356] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262062.309139066] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262064.409126854] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+[WARN] [1788262066.509109848] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.43 m < 0.50 m; halting
+Traceback (most recent call last):
+  File "/ws/install/spore_patrol_route_validation/lib/spore_patrol_route_validation/route_tracker", line 33, in <module>
+    sys.exit(load_entry_point('spore-patrol-route-validation==0.1.0', 'console_scripts', 'route_tracker')())
+  File "/ws/install/spore_patrol_route_validation/lib/python3.10/site-packages/spore_patrol_route_validation/route_tracker_node.py", line 432, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 681, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

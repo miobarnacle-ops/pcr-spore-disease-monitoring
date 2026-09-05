@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="spore_patrol_farmland_8x6">
+    <gravity>0 0 -9.8</gravity>
+    <physics type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Canonical Stage C field: 8 m in x, 6 m in y. -->
+    <model name="soil">
+      <static>true</static>
+      <pose>0 0 -0.05 0 0 0</pose>
+      <link name="soil_link">
+        <collision name="soil_collision">
+          <geometry>
+            <box><size>8.0 6.0 0.10</size></box>
+          </geometry>
+        </collision>
+        <visual name="soil_visual">
+          <geometry>
+            <box><size>8.0 6.0 0.10</size></box>
+          </geometry>
+          <material>
+            <ambient>0.30 0.17 0.08 1</ambient>
+            <diffuse>0.42 0.24 0.10 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Low, continuous field boundaries give the first map a closed reference. -->
+    <model name="field_boundary_west">
+      <static>true</static>
+      <pose>-3.94 0 0.30 0 0 0</pose>
+      <link name="boundary">
+        <collision name="collision"><geometry><box><size>0.12 6.0 0.60</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.12 6.0 0.60</size></box></geometry><material><ambient>0.24 0.24 0.24 1</ambient><diffuse>0.35 0.35 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="field_boundary_east">
+      <static>true</static>
+      <pose>3.94 0 0.30 0 0 0</pose>
+      <link name="boundary">
+        <collision name="collision"><geometry><box><size>0.12 6.0 0.60</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.12 6.0 0.60</size></box></geometry><material><ambient>0.24 0.24 0.24 1</ambient><diffuse>0.35 0.35 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="field_boundary_south">
+      <static>true</static>
+      <pose>0 -2.94 0.30 0 0 0</pose>
+      <link name="boundary">
+        <collision name="collision"><geometry><box><size>8.0 0.12 0.60</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>8.0 0.12 0.60</size></box></geometry><material><ambient>0.24 0.24 0.24 1</ambient><diffuse>0.35 0.35 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="field_boundary_north">
+      <static>true</static>
+      <pose>0 2.94 0.30 0 0 0</pose>
+      <link name="boundary">
+        <collision name="collision"><geometry><box><size>8.0 0.12 0.60</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>8.0 0.12 0.60</size></box></geometry><material><ambient>0.24 0.24 0.24 1</ambient><diffuse>0.35 0.35 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Three parallel crop rows. Adjacent clear corridor is 1.42 - 0.22 = 1.20 m. -->
+    <model name="crop_row_1">
+      <static>true</static>
+      <pose>0 -1.42 0.25 0 0 0</pose>
+      <link name="row">
+        <collision name="collision"><geometry><box><size>4.80 0.22 0.50</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>4.80 0.22 0.50</size></box></geometry><material><ambient>0.05 0.35 0.08 1</ambient><diffuse>0.08 0.62 0.12 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="crop_row_2">
+      <static>true</static>
+      <pose>0 0 0.25 0 0 0</pose>
+      <link name="row">
+        <collision name="collision"><geometry><box><size>4.80 0.22 0.50</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>4.80 0.22 0.50</size></box></geometry><material><ambient>0.05 0.35 0.08 1</ambient><diffuse>0.08 0.62 0.12 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="crop_row_3">
+      <static>true</static>
+      <pose>0 1.42 0.25 0 0 0</pose>
+      <link name="row">
+        <collision name="collision"><geometry><box><size>4.80 0.22 0.50</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>4.80 0.22 0.50</size></box></geometry><material><ambient>0.05 0.35 0.08 1</ambient><diffuse>0.08 0.62 0.12 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- No static obstacle in the first mapping pass; add one only as a follow-up scenario. -->
+    <gui fullscreen="0">
+      <camera name="overview">
+        <pose>-7.5 -7.0 7.0 0 0.55 0.78</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  </world>
+</sdf>

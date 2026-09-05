@@ -1,0 +1,3 @@
+PASS farmland map geometry
+- grid=157x117 coverage=7.85x5.85 m
+- rows=y=-1.42: 100.0%, spread=0.018m, y=0.00: 100.0%, spread=0.003m, y=1.42: 100.0%, spread=0.030m

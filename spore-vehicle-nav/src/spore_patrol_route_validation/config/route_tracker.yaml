@@ -1,0 +1,40 @@
+spore_patrol_route_validation:
+  ros__parameters:
+    # --- topics ----------------------------------------------------------
+    odom_topic: /odometry/filtered      # EKF output (preferred)
+    odom_fallback_topic: /odom          # base_driver wheel odometry
+    cmd_vel_topic: /cmd_vel
+    mission_status_topic: /mission/status
+
+    # --- task file -------------------------------------------------------
+    # Override on launch with the deployed route path.
+    route_file: ""
+
+    # --- tracking limits (CONVENTIONS §5) --------------------------------
+    max_linear_mps: 0.12
+    max_angular_radps: 0.30
+    lookahead_m: 0.5
+    min_turn_radius_m: 0.5               # chassis minimum turning radius
+    speed_limit_cap_mps: 0.30            # validation ceiling for waypoint speed
+
+    # --- field -> map start pose (map/odom frame) ------------------------
+    start_pose_x: 0.0
+    start_pose_y: 0.0
+    start_pose_yaw: 0.0
+
+    # --- sampling behaviour ---------------------------------------------
+    enable_simulation_dwell: true
+    sampling_duration_s: 2.0             # simulated sample dwell at sampling wp
+    settle_duration_s: 0.0
+
+    # --- control loop ----------------------------------------------------
+    control_rate_hz: 10.0                # >= 5 Hz to satisfy cmd_vel watchdog
+    path_spacing_m: 0.1                  # equal-arc resample spacing
+    smooth_iterations: 3                 # Chaikin corner-cutting iterations
+    odom_timeout_s: 1.0                  # switch filtered -> fallback threshold
+
+    obstacle_stop_enabled: True          # lidar-proximity software stop
+    obstacle_dist_threshold_m: 0.5       # halt when closest FRONT scan < this
+    obstacle_forward_half_fov_deg: 90.0  # front sector only; rear returns ignored
+    scan_timeout_s: 0.5                  # stale-scan guard
+    status_heartbeat_hz: 1.0             # /mission/status heartbeat rate

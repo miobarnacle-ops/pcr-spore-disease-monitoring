@@ -1,0 +1,30 @@
+spore_patrol_gnss:
+  ros__parameters:
+    # Safe default: do not open a serial device until explicitly enabled.
+    enabled: false
+    port: /dev/ttyUSB0
+    baud_rate: 9600
+    frame_id: gnss_link
+    poll_rate_hz: 50.0
+    fix_timeout_s: 2.0
+    require_checksum: false
+
+    # Conservative configurable estimate for ordinary single GNSS only;
+    # this is not a measured accuracy claim and is not RTK covariance.
+    single_fix_std_m: 5.0
+
+    fix_topic: /fix
+    velocity_topic: /gps/velocity
+    speed_topic: /gps/speed_mps
+    course_topic: /gps/course_deg
+    raw_topic: /gps/raw_nmea
+    status_topic: /gps/status
+    diagnostics_topic: /gps/diagnostics
+    enu_topic: /gps/enu
+
+    # Keep false until a surveyed local origin is supplied.
+    publish_enu: false
+    enu_frame_id: field
+    origin_latitude_deg: 0.0
+    origin_longitude_deg: 0.0
+    origin_altitude_m: 0.0

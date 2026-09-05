@@ -1,0 +1,213 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页说明 Web 生成的路线如何进入车辆端。需要强调接口已经冻结，路径跟踪节点已经实现；当前还差正式场地、独立真值和真实采样器。
+elements:
+  - elementId: p5-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: route_v1 和任务状态机已落地，小尺度路线已完成验证
+  - elementId: p5-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 车辆节点：route_tracker_node；控制频率 10 Hz；任务心跳 1 Hz
+  - elementId: p5-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-l1
+    elementType: line
+    bounds: [210, 168, 42, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-l2
+    elementType: line
+    bounds: [380, 168, 42, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-l3
+    elementType: line
+    bounds: [550, 168, 42, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-l4
+    elementType: line
+    bounds: [720, 168, 42, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-n1
+    elementType: shape
+    bounds: [60, 135, 150, 66]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-n2
+    elementType: shape
+    bounds: [252, 135, 128, 66]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-n3
+    elementType: shape
+    bounds: [422, 135, 128, 66]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-n4
+    elementType: shape
+    bounds: [592, 135, 128, 66]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-n5
+    elementType: shape
+    bounds: [762, 135, 138, 66]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-t1
+    elementType: text
+    bounds: [68, 151, 134, 34]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: Web 规划
+  - elementId: p5-t2
+    elementType: text
+    bounds: [258, 151, 116, 34]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 路线校验
+  - elementId: p5-t3
+    elementType: text
+    bounds: [428, 151, 116, 34]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 坐标转换
+  - elementId: p5-t4
+    elementType: text
+    bounds: [598, 151, 116, 34]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: Pure Pursuit
+  - elementId: p5-t5
+    elementType: text
+    bounds: [770, 151, 122, 34]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: /cmd_vel
+  - elementId: p5-schema
+    elementType: text
+    bounds: [60, 245, 390, 142]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.35
+      text: |
+        route_v1 接口
+
+        schema_version=1.0
+        frame_id=field；coordinate_type=local_enu；unit=m
+        航点：seq / x_m / y_m / yaw_rad / type
+        任务关联：round / sample_id / speed_limit_mps / tolerance_m
+  - elementId: p5-state
+    elementType: text
+    bounds: [505, 245, 395, 142]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.35
+      text: |
+        状态机与安全逻辑
+
+        IDLE → TASK_LOADED → NAVIGATING
+        → ARRIVED → SETTLING → SAMPLING
+        → SAMPLE_FINISHED → TASK_FINISHED
+
+        支持暂停 / 继续 / 返航 / 取消 / 故障；
+        位姿或雷达过期、未知状态、前向障碍时输出零速度。
+  - elementId: p5-bottom-rule
+    elementType: line
+    bounds: [60, 414, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p5-bottom
+    elementType: text
+    bounds: [60, 430, 840, 44]
+    content:
+      style: "$body"
+      text: 小尺度实车已完成 6 类、9 次测试；正式小花园路线、独立真值误差和真实采样器仍待补齐。
+  - elementId: p5-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 05 / 11
+

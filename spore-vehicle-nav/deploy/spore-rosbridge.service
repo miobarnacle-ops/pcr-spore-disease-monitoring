@@ -1,0 +1,21 @@
+[Unit]
+Description=Spore vehicle rosbridge WebSocket gateway
+Documentation=file:///home/pi/spore_patrol_ws/README.md
+Requires=docker.service
+After=docker.service network-online.target spore-vehicle-stack.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/spore-rosbridge
+ExecStop=/usr/local/sbin/spore-rosbridge stop
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=20
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=spore-rosbridge
+
+[Install]
+WantedBy=multi-user.target

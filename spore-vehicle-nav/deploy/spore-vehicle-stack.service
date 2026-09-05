@@ -1,0 +1,21 @@
+[Unit]
+Description=Spore vehicle ROS 2 sensor and localization stack
+Documentation=file:///home/pi/spore_patrol_ws/README.md
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/spore-vehicle-stack
+ExecStop=/usr/local/sbin/spore-vehicle-stack stop
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=25
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=spore-vehicle-stack
+
+[Install]
+WantedBy=multi-user.target

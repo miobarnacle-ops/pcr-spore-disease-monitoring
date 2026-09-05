@@ -1,0 +1,6 @@
+Opened /dev/pts/0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_014650_533864_listen
+frames=291.6Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.50V
+frames= 20.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.50V
+frames= 20.5Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.50V
+Captured 61 valid frames (20.0 Hz average)

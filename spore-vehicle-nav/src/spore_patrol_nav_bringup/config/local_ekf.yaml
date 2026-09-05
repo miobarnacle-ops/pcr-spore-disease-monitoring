@@ -1,0 +1,67 @@
+# robot_localization EKF for the spore patrol vehicle (Stage C).
+#
+# Fuses the base driver wheel odometry (/odom: forward velocity + zero
+# lateral velocity, which constrains this skid-steer chassis) with the
+# ICM20948 (C50C) yaw rate from /imu/data_raw. The fused output is published
+# on /odometry/filtered.
+#
+# TF ownership (CONVENTIONS.md §1):
+#   map -> odom                 SLAM Toolbox (this package's slam_toolbox.yaml)
+#   odom -> base_footprint      this EKF (publish_tf: true)
+#   base_footprint -> base_link -> laser_link   base driver / robot_state_publisher
+
+ekf_local_filter_node:
+  ros__parameters:
+    # Continuous local odometry for a planar skid-steer chassis.
+    frequency: 20.0
+    sensor_timeout: 0.20
+    two_d_mode: true
+    transform_time_offset: 0.0
+    transform_timeout: 0.10
+    print_diagnostics: true
+    debug: false
+    publish_tf: true
+    publish_acceleration: false
+    reset_on_time_jump: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom
+
+    # The STM32 odometry pose is integrated from the same velocity fields.
+    # Fuse velocity only, avoiding duplicate use of one wheel measurement.
+    # The measured zero lateral velocity constrains this skid-steer chassis.
+    odom0: /odom
+    odom0_config: [false, false, false,
+                   false, false, false,
+                   true,  true,  false,
+                   false, false, false,
+                   false, false, false]
+    odom0_queue_size: 10
+    odom0_nodelay: true
+    odom0_differential: false
+    odom0_relative: false
+
+    # ICM20948 IMU (C50C). Fuse only the yaw angular velocity (gyro Z).
+    # The STM32 protocol has no valid orientation quaternion or magnetometer;
+    # accelerometer vibration and gravity remain deliberately excluded.
+    # NOTE: /imu/data_raw is fused directly (no software bias calibration in
+    # this config/launch-only package). Keep the chassis stationary at startup
+    # and check /odometry/filtered heading for drift before mapping.
+    imu0: /imu/data_raw
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, true,
+                  false, false, false]
+    imu0_queue_size: 20
+    imu0_nodelay: true
+    imu0_differential: false
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: false
+
+    use_control: false
+    dynamic_process_noise_covariance: false
+    predict_to_current_time: false
+    smooth_lagged_data: false

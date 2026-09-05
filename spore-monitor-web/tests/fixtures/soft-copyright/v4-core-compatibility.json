@@ -1,0 +1,61 @@
+{
+  "reference": {
+    "archive": "揭榜挂帅.zip",
+    "source": "软著/main_inspection_system_v4_compliance.py",
+    "sha256": "04bf1709e32556c0c0bc1096e81a6a6f651b5ec572e409c0297ec22da316cd71",
+    "generatedAt": "2026-08-30",
+    "scope": "仅记录明确继承的基础算法样例；Web 增强算法不要求与此数值完全一致。"
+  },
+  "geometry": {
+    "polygon": [[0, 0], [8, 0], [8, 4], [3, 7], [0, 4]],
+    "rotate": { "point": [3, 4], "center": [1, 1], "thetaRadians": 1.5707963267948966, "expected": [-2, 3] },
+    "inside": { "point": [3, 2], "expected": true },
+    "outside": { "point": [9, 2], "expected": false },
+    "scanline": { "y": 3, "expected": [0, 8] },
+    "area": 44,
+    "legacyCentroid": [-3.909090909090909, -2.8181818181818183],
+    "webCorrectedCentroid": [3.909090909090909, 2.8181818181818183]
+  },
+  "riskCases": [
+    { "value": 99.9, "medium": 100, "high": 300, "expected": "low" },
+    { "value": 100, "medium": 100, "high": 300, "expected": "medium" },
+    { "value": 299.9, "medium": 100, "high": 300, "expected": "medium" },
+    { "value": 300, "medium": 100, "high": 300, "expected": "high" }
+  ],
+  "stabilityCases": [
+    { "wind": 1.9, "daytime": true, "cloud": 0, "expected": "A" },
+    { "wind": 2, "daytime": true, "cloud": 0, "expected": "B" },
+    { "wind": 3, "daytime": true, "cloud": 0, "expected": "C" },
+    { "wind": 5, "daytime": true, "cloud": 0, "expected": "D" },
+    { "wind": 2.9, "daytime": false, "cloud": 49, "expected": "F" },
+    { "wind": 2.9, "daytime": false, "cloud": 50, "expected": "E" },
+    { "wind": 3, "daytime": false, "cloud": 0, "expected": "D" }
+  ],
+  "pcr": {
+    "curve": { "slope": -3.3, "intercept": 40, "lod": 10, "positiveCt": 30, "negativeCt": 35, "gene": "ITS1-F/ITS4-R" },
+    "cases": [
+      { "ct": 20, "quality": "valid", "dilution": 1, "concentration": 1149757, "verdict": "强阳性" },
+      { "ct": 30, "quality": "valid", "dilution": 1, "concentration": 1072.3, "verdict": "强阳性" },
+      { "ct": 33, "quality": "valid", "dilution": 2, "concentration": 264.4, "verdict": "阳性" },
+      { "ct": 34, "quality": "valid", "dilution": 1, "concentration": 65.8, "verdict": "弱阳性" },
+      { "ct": 35, "quality": "valid", "dilution": 1, "concentration": 32.7, "verdict": "阴性" },
+      { "ct": null, "quality": "invalid", "dilution": 1, "concentration": null, "verdict": "无效" }
+    ]
+  },
+  "comparison": {
+    "mediumThreshold": 15,
+    "highThreshold": 25,
+    "samples": [
+      { "turbidity": 10, "concentration": 100, "verdict": "阴性" },
+      { "turbidity": 20, "concentration": 200, "verdict": "弱阳性" },
+      { "turbidity": 30, "concentration": 300, "verdict": "阳性" }
+    ],
+    "expected": { "count": 3, "r": 1, "agreement": 2, "agreementPct": 66.66666666666666 }
+  },
+  "enhancementBoundary": {
+    "gaussianPlume": {
+      "legacySamples": { "downwind": 29.37418897676661, "crosswind": 0.0006773112767892719, "upwind": 0 },
+      "policy": "Web 采用受体高度、镜像源与沉降项的增强模型；只保持上风向为零和非负性等物理约束，不锁定旧实现数值。"
+    }
+  }
+}

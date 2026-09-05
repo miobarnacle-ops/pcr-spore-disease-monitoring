@@ -1,0 +1,6 @@
+2026-08-31T13:50:53+08:00
+world=<REPO_ROOT>/spore-patrol-robot-feature-lidar/src/spore_patrol_sim/worlds/farmland_8x6.world
+layout=<REPO_ROOT>/spore-patrol-robot-feature-lidar/src/spore_patrol_sim/config/farmland_layout.json
+slam_params=<REPO_ROOT>/spore-patrol-robot-feature-lidar/src/spore_patrol_sim/config/sim_mapping.yaml
+mode=headless_gazebo_slam
+drive=true

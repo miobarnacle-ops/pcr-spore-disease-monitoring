@@ -1,0 +1,179 @@
+pageType: final
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页说明后续验证顺序。顺序不能跳过：先确认室外原始数据，再做 GNSS-SLAM 坐标标定，然后进入融合，最后用独立真值做定位精度验证。
+elements:
+  - elementId: g2-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 下一步验证链路：室外实测 → 坐标标定 → 多传感器融合 → 精度验证
+  - elementId: g2-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 目标：把已完成的软件接口转化为可复现的现场数据和定位误差证据
+  - elementId: g2-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-l1
+    elementType: line
+    bounds: [245, 170, 30, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-l2
+    elementType: line
+    bounds: [450, 170, 30, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-l3
+    elementType: line
+    bounds: [655, 170, 30, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-n1
+    elementType: shape
+    bounds: [60, 133, 185, 75]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-n2
+    elementType: shape
+    bounds: [275, 133, 175, 75]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-n3
+    elementType: shape
+    bounds: [480, 133, 175, 75]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-n4
+    elementType: shape
+    bounds: [685, 133, 215, 75]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-t1
+    elementType: text
+    bounds: [70, 147, 165, 42]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 1 室外实测
+  - elementId: g2-t2
+    elementType: text
+    bounds: [285, 147, 155, 42]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 2 GNSS-SLAM 坐标标定
+  - elementId: g2-t3
+    elementType: text
+    bounds: [490, 147, 155, 42]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: 3 多传感器融合
+  - elementId: g2-t4
+    elementType: text
+    bounds: [695, 147, 195, 42]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: 4 实车定位精度验证
+  - elementId: g2-table
+    elementType: table
+    bounds: [60, 255, 840, 205]
+    columnWidths: [0.22, 0.47, 0.31]
+    rowHeights: [0.20, 0.20, 0.20, 0.20, 0.20]
+    style: "$default"
+    rows:
+      - - text: "阶段"
+        - text: "主要检查内容"
+        - text: "阶段输出"
+      - - text: "室外实测"
+        - text: "卫星信号、输出频率、时间戳、连续性和原始数据"
+        - text: "原始日志 / rosbag / 环境记录"
+      - - text: "坐标标定"
+        - text: "ENU 原点、航向、GNSS↔SLAM map 的平移和旋转关系"
+        - text: "坐标变换参数 / 标定记录"
+      - - text: "多传感器融合"
+        - text: "GNSS + 轮速 + IMU + SLAM 的融合方案和降级逻辑"
+        - text: "融合位姿 / 质量状态"
+      - - text: "精度验证"
+        - text: "使用独立真值对比定位误差、稳定性和异常点"
+        - text: "误差报告 / 是否满足目标"
+  - elementId: g2-bottom-rule
+    elementType: line
+    bounds: [60, 478, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g2-bottom
+    elementType: text
+    bounds: [60, 488, 760, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      text: 当前结论：软件接入已完成；室外实测、标定、融合和精度数据是下一阶段的验收依据。
+  - elementId: g2-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 02 / 02
+

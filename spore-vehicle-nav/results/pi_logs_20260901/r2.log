@@ -1,0 +1,9 @@
+[INFO] [1787760571.121204759] [spore_patrol_route_tracker]: loaded route /ws/routes/trial2_3m_straight.json: 4 waypoints, 31 smoothed points
+[INFO] [1787760571.131829442] [spore_patrol_route_tracker]: route tracker ready: odom=/odometry/filtered (fallback /odom), cmd_vel=/cmd_vel at 10.0 Hz
+[WARN] [1787760583.532334970] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.41 m < 0.50 m; halting
+[WARN] [1787760590.632345227] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.48 m < 0.50 m; halting
+[WARN] [1787760592.632334337] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.45 m < 0.50 m; halting
+[WARN] [1787760594.832294156] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.39 m < 0.50 m; halting
+[WARN] [1787760596.932274409] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.38 m < 0.50 m; halting
+[WARN] [1787760598.932277340] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.38 m < 0.50 m; halting
+[WARN] [1787760601.132293936] [spore_patrol_route_tracker]: OBSTACLE STOP: min scan 0.37 m < 0.50 m; halting

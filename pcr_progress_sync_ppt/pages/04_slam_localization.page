@@ -1,0 +1,104 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页区分仿真、静止实机和运动实机三类证据。仿真建图已经可重复；实机组合栈和单垄验证已经有结果；正式小花园地图、独立真值和 RTK 仍未完成。
+elements:
+  - elementId: p4-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: X3 Pro + EKF + SLAM 已跑通，正式场地证据未补齐
+  - elementId: p4-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 传感器链路：X3 Pro /scan → SLAM Toolbox；轮速 + ICM20948 → robot_localization EKF
+  - elementId: p4-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p4-tf-label
+    elementType: text
+    bounds: [60, 132, 250, 26]
+    content:
+      style: "$section"
+      fontSize: 18
+      text: TF 归属
+  - elementId: p4-tf
+    elementType: text
+    bounds: [60, 170, 250, 116]
+    content:
+      style: "$body"
+      lineHeight: 1.5
+      text: |
+        map
+          ↓
+        odom
+          ↓
+        base_footprint
+          ↓
+        base_link → laser_link
+  - elementId: p4-tf-note
+    elementType: text
+    bounds: [60, 310, 250, 72]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: |
+        SLAM 负责 map→odom
+        EKF 负责 odom→base_footprint
+        路线按 field 坐标转换到 map/odom
+  - elementId: p4-evidence-table
+    elementType: table
+    bounds: [350, 132, 550, 250]
+    columnWidths: [0.22, 0.44, 0.34]
+    rowHeights: [0.20, 0.20, 0.20, 0.20, 0.20]
+    style: "$default"
+    rows:
+      - - text: "证据层级"
+        - text: "配置 / 条件"
+        - text: "结果"
+      - - text: "仿真场景"
+        - text: "8 m × 6 m；3 垄；0.05 m 栅格"
+        - text: "9 航点闭环通过"
+      - - text: "地图保存"
+        - text: "PGM/YAML + pose graph/data"
+        - text: "文件已归档"
+      - - text: "重复性"
+        - text: "两次同配置低速闭环"
+        - text: "最大偏移 0.050 m"
+      - - text: "实机单垄"
+        - text: "2026-09-01；1.73 m；U-turn 3.36 m"
+        - text: "航向漂移约 0.2°"
+  - elementId: p4-bottom-rule
+    elementType: line
+    bounds: [60, 414, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p4-bottom
+    elementType: text
+    bounds: [60, 430, 840, 44]
+    content:
+      style: "$body"
+      text: 正式小花园地图、实机 rosbag、重复路线、独立真值 P95、室外长期稳定性和 RTK 融合仍待完成。
+  - elementId: p4-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 04 / 11
+

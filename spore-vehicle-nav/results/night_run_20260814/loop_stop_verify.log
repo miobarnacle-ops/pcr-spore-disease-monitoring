@@ -1,0 +1,240 @@
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_015331_739454_listen
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.12V
+frames= 19.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.12V
+Captured 39 valid frames (19.0 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_020343_217287_listen
+frames= 20.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.08V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.07V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_021354_702422_listen
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.03V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=24.03V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_022406_180263_listen
+frames= 19.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.99V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.99V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_023417_600902_listen
+frames=183.2Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.97V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.97V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_024429_021734_listen
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.96V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.95V
+Captured 40 valid frames (20.0 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_025440_441713_listen
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.95V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.94V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_030451_910087_listen
+frames=442.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.92V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.92V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_031503_333848_listen
+frames= 19.3Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.92V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.91V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_032514_752280_listen
+frames=178.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.92V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.91V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_033526_190143_listen
+frames= 20.6Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.91V
+frames= 20.0Hz stop=0 vx=+0.001 vy=-0.001 wz=+0.005 battery=23.91V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_034537_666348_listen
+frames= 21.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.001 battery=23.91V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.90V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_035549_120600_listen
+frames=333.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.91V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.91V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_040600_570132_listen
+frames= 23.4Hz stop=0 vx=+0.001 vy=-0.001 wz=+0.006 battery=23.90V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+Captured 40 valid frames (19.6 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_041612_054283_listen
+frames= 20.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_042623_539389_listen
+frames=100.5Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+frames= 20.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_043634_990109_listen
+frames=177.5Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.89V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.88V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_044646_424309_listen
+frames=226.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.88V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.88V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_045657_867136_listen
+frames=328.3Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_050709_308789_listen
+frames=172.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.88V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_051720_773363_listen
+frames=332.6Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_052732_194825_listen
+frames=181.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.87V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.86V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_053743_629736_listen
+frames=209.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_054755_073108_listen
+frames= 19.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.001 battery=23.86V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+Captured 40 valid frames (20.0 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_055806_469841_listen
+frames= 22.3Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.86V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_060817_948646_listen
+frames=195.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_061829_343793_listen
+frames= 19.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_062840_796188_listen
+frames=170.5Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_063852_246881_listen
+frames=371.2Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_064903_622706_listen
+frames= 20.2Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_065915_080300_listen
+frames=375.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.85V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_070926_466268_listen
+frames=314.7Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_071937_905106_listen
+frames= 21.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_072949_376861_listen
+frames=120.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.001 battery=23.83V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_074000_818732_listen
+frames= 19.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_075012_298853_listen
+frames=292.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.84V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_080023_736584_listen
+frames= 19.8Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_081035_217765_listen
+frames=393.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_082046_660203_listen
+frames= 22.5Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_083058_131221_listen
+frames=174.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_084109_573471_listen
+frames= 21.3Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+frames= 20.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.5 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_085121_050802_listen
+frames=372.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_090132_485839_listen
+frames= 19.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_091143_932308_listen
+frames= 26.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.83V
+frames= 20.2Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.6 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_092155_401656_listen
+frames=393.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (20.0 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_093206_833640_listen
+frames=241.4Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_094218_266179_listen
+frames=202.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.9Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 40 valid frames (19.9 Hz average)
+Opened /dev/ttyACM0 at 115200 baud
+Results: <REPO_ROOT>/spore-patrol-robot-feature-lidar/tests/results/20260815_095229_695488_listen
+frames= 19.1Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+frames= 20.0Hz stop=0 vx=+0.000 vy=+0.000 wz=+0.000 battery=23.82V
+Captured 39 valid frames (19.5 Hz average)

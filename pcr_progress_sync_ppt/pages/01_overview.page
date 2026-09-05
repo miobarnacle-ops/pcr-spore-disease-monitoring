@@ -1,0 +1,129 @@
+pageType: cover
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  先讲结论：项目的代码和离线验证已经形成工程骨架，车辆基础栈和小尺度路线已经有实机结果；接下来重点不是继续堆离线功能，而是补 RTK、安全、正式场地和真实采样证据。
+elements:
+  - elementId: cover-mark
+    elementType: shape
+    bounds: [58, 56, 9, 112]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+  - elementId: cover-title
+    elementType: text
+    bounds: [88, 54, 790, 48]
+    content:
+      style: "$title"
+      fontSize: 34
+      wrap: false
+      text: PCR 项目组内进度同步
+  - elementId: cover-subtitle
+    elementType: text
+    bounds: [90, 112, 760, 30]
+    content:
+      style: "$body"
+      color: "$muted"
+      wrap: false
+      text: 车辆 ROS / Web 控制台 / PCR 算法 / 集成验证
+  - elementId: cover-rule
+    elementType: line
+    bounds: [88, 177, 790, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: cover-conclusion
+    elementType: text
+    bounds: [90, 208, 790, 76]
+    content:
+      style: "$section"
+      fontSize: 23
+      lineHeight: 1.35
+      text: |
+        已形成“规划 → 车辆执行 → 数据回传 → 风险预测”的工程骨架。
+        当前进入现场证据收口阶段：RTK、failsafe、正式场地、真实采样仍未闭环。
+  - elementId: metric-line-1
+    elementType: line
+    bounds: [90, 355, 235, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 1
+      color: "$line"
+  - elementId: metric-1
+    elementType: text
+    bounds: [90, 372, 235, 42]
+    content:
+      style: "$metric"
+      text: 91 + 5 + 7
+  - elementId: metric-label-1
+    elementType: text
+    bounds: [90, 420, 235, 28]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: 车辆离线测试 / GNSS / YAML
+  - elementId: metric-line-2
+    elementType: line
+    bounds: [360, 355, 235, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 1
+      color: "$line"
+  - elementId: metric-2
+    elementType: text
+    bounds: [360, 372, 235, 42]
+    content:
+      style: "$metric"
+      text: 6 类 / 9 次
+  - elementId: metric-label-2
+    elementType: text
+    bounds: [360, 420, 235, 28]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: 小尺度实车路线测试
+  - elementId: metric-line-3
+    elementType: line
+    bounds: [630, 355, 235, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 1
+      color: "$line"
+  - elementId: metric-3
+    elementType: text
+    bounds: [630, 372, 235, 42]
+    content:
+      style: "$metric"
+      text: 5 项
+  - elementId: metric-label-3
+    elementType: text
+    bounds: [630, 420, 235, 28]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: RTK / 真值 / 采样 / 安全缺口
+  - elementId: cover-date
+    elementType: text
+    bounds: [90, 492, 540, 18]
+    content:
+      style: "$muted"
+      text: 截止 2026-09-05｜组内进度同步
+  - elementId: cover-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 01 / 11
+

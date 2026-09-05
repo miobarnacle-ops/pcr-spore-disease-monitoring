@@ -1,0 +1,14 @@
+test_bad_bcc_is_rejected (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_capture_writes_si_columns_and_summary (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_distance_test_safety_limits (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_linux_serial_port_round_trip_over_pty (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_parse_status (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_rotation_test_safety_limits (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_signed_command_values (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_stream_decoder_recovers_after_noise_and_fragmentation (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+test_zero_command (tests.chassis_serial.test_protocol.ProtocolTest) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "frame_id": "field",
+  "coordinate_type": "local_enu",
+  "unit": "m",
+  "field_polygon_m": [[-0.3, -0.3], [3.3, -0.3], [3.3, 0.3], [-0.3, 0.3]],
+  "sampling_points": [],
+  "path": [
+    {"seq": 0, "x_m": 0.0, "y_m": 0.0, "yaw_rad": null, "type": "start",   "round": 1, "sample_id": null, "speed_limit_mps": 0.12, "tolerance_m": 0.20},
+    {"seq": 1, "x_m": 1.0, "y_m": 0.0, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.12, "tolerance_m": 0.20},
+    {"seq": 2, "x_m": 2.0, "y_m": 0.0, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.12, "tolerance_m": 0.20},
+    {"seq": 3, "x_m": 3.0, "y_m": 0.0, "yaw_rad": null, "type": "transit", "round": 1, "sample_id": null, "speed_limit_mps": 0.12, "tolerance_m": 0.15}
+  ]
+}

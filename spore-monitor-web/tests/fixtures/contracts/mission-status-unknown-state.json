@@ -1,0 +1,18 @@
+{
+  "contract_version": "1.0",
+  "kind": "mission_status",
+  "source_mode": "mock",
+  "timestamp_ms": 1777550400000,
+  "field_id": "field-demo",
+  "mission_id": "mission-demo-001",
+  "route_id": "route-demo-001",
+  "state": "teleporting",
+  "current_waypoint_index": 1,
+  "current_waypoint_seq": 1,
+  "sample_id": null,
+  "progress_pct": 33.3,
+  "eta_s": 180,
+  "obstacle_stop": false,
+  "fault_code": null,
+  "message": "未知状态"
+}

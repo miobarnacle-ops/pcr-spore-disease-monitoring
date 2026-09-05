@@ -1,0 +1,215 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页同步北斗同学当前已经完成的内容。重点是软件接入和坐标接口已经提交 Git，暂时不要把它表述成室外定位精度已经验证。
+elements:
+  - elementId: g1-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: 北斗/GNSS 模块：ROS2 接入、ENU 转换和 SLAM 接口已完成
+  - elementId: g1-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 当前进度：节点、launch、依赖均已完成并提交 Git
+  - elementId: g1-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-flow-1
+    elementType: line
+    bounds: [230, 186, 45, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-flow-2
+    elementType: line
+    bounds: [420, 186, 45, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-flow-3
+    elementType: line
+    bounds: [610, 186, 45, 1]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    arrow: [null, arrow]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-node-1
+    elementType: shape
+    bounds: [65, 150, 165, 72]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-node-2
+    elementType: shape
+    bounds: [275, 150, 145, 72]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primaryTint"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-node-3
+    elementType: shape
+    bounds: [465, 150, 145, 72]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primarySoft"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-node-4
+    elementType: shape
+    bounds: [655, 150, 240, 72]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-text-1
+    elementType: text
+    bounds: [75, 166, 145, 40]
+    content:
+      style: "$body"
+      bold: true
+      align: [center, middle]
+      text: ATGM336H
+  - elementId: g1-text-2
+    elementType: text
+    bounds: [285, 166, 125, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: ROS2 节点
+  - elementId: g1-text-3
+    elementType: text
+    bounds: [475, 166, 125, 40]
+    content:
+      style: "$bodySmall"
+      bold: true
+      align: [center, middle]
+      text: WGS84 → ENU
+  - elementId: g1-text-4
+    elementType: text
+    bounds: [670, 166, 210, 40]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: SLAM map 坐标接口
+  - elementId: g1-left-title
+    elementType: text
+    bounds: [65, 285, 260, 28]
+    content:
+      style: "$section"
+      fontSize: 18
+      text: 已完成的技术内容
+  - elementId: g1-left-line
+    elementType: line
+    bounds: [65, 322, 390, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-left
+    elementType: text
+    bounds: [65, 338, 390, 116]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.45
+      text: |
+        1. ATGM336H 北斗模块完成 ROS2 接入。
+        2. 完成地理坐标到局部 ENU 坐标转换。
+        3. 完成 ENU 坐标与 SLAM map 坐标系的接口适配。
+        4. 相关节点、launch 和依赖均已完成。
+  - elementId: g1-right-title
+    elementType: text
+    bounds: [525, 285, 260, 28]
+    content:
+      style: "$section"
+      fontSize: 18
+      text: 当前交付状态
+  - elementId: g1-right-line
+    elementType: line
+    bounds: [525, 322, 370, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-right-metric
+    elementType: text
+    bounds: [525, 340, 370, 48]
+    content:
+      style: "$metric"
+      text: ROS2 / ENU / map
+  - elementId: g1-right-note
+    elementType: text
+    bounds: [525, 395, 370, 62]
+    content:
+      style: "$bodySmall"
+      color: "$muted"
+      text: |
+        软件接口阶段已完成并提交 Git。
+        下一阶段转入室外实测和坐标标定。
+  - elementId: g1-bottom-rule
+    elementType: line
+    bounds: [60, 478, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: g1-bottom
+    elementType: text
+    bounds: [60, 488, 760, 25]
+    content:
+      style: "$bodySmall"
+      bold: true
+      text: 当前边界：已完成软件适配，不等同于室外定位精度或 RTK 指标已验证。
+  - elementId: g1-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 01 / 02
+

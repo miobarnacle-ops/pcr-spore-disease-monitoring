@@ -1,0 +1,97 @@
+pageType: content
+background:
+  type: solid
+  color: "$bg"
+notes: |
+  这一页区分三种数据模式和验证层级。集成契约已经冻结，离线故障注入已经覆盖，但真实 rosbridge 运动、任务下发和采样联动还没有形成完整闭环。
+elements:
+  - elementId: p9-title
+    elementType: text
+    bounds: [58, 32, 840, 34]
+    content:
+      style: "$title"
+      text: Web—车辆契约已冻结，当前是只读遥测加离线模拟
+  - elementId: p9-meta
+    elementType: text
+    bounds: [60, 70, 840, 20]
+    content:
+      style: "$muted"
+      text: 统一内容：任务状态、事件、位姿、雷达、电池、诊断、RTK、采样器、新鲜度
+  - elementId: p9-rule
+    elementType: line
+    bounds: [60, 98, 840, 2]
+    viewBox: [1, 1]
+    points: "0,0.5 1,0.5"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p9-table
+    elementType: table
+    bounds: [60, 130, 840, 230]
+    columnWidths: [0.18, 0.25, 0.36, 0.21]
+    rowHeights: [0.20, 0.20, 0.20, 0.20, 0.20]
+    style: "$default"
+    rows:
+      - - text: "模式"
+        - text: "输入"
+        - text: "覆盖内容"
+        - text: "真实运动"
+      - - text: "Mock"
+        - text: "确定性模拟器"
+        - text: "加载、行驶、到点、采样、返航、故障"
+        - text: "不发布 /cmd_vel"
+      - - text: "Replay"
+        - text: "版本化回放 fixture"
+        - text: "按时间选择任务和遥测帧"
+        - text: "只读"
+      - - text: "rosbridge"
+        - text: "车辆实时 ROS 话题"
+        - text: "位姿、雷达、电池、诊断、任务、GNSS"
+        - text: "当前只读"
+      - - text: "真实闭环"
+        - text: "现场任务 + 采样器"
+        - text: "任务下发、执行、采样、回传、告警"
+        - text: "尚未完成"
+  - elementId: p9-test-title
+    elementType: text
+    bounds: [60, 395, 260, 28]
+    content:
+      style: "$section"
+      fontSize: 18
+      text: 当前离线质量门
+  - elementId: p9-tests
+    elementType: text
+    bounds: [60, 430, 510, 54]
+    content:
+      style: "$bodySmall"
+      lineHeight: 1.35
+      text: 车辆：91 项路线/安全 + 5 项 GNSS + 7 份 YAML；Web：41 项测试 + 2 项渲染；lint、TypeScript、构建均通过。
+  - elementId: p9-boundary
+    elementType: shape
+    bounds: [625, 395, 275, 90]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+  - elementId: p9-boundary-text
+    elementType: text
+    bounds: [640, 408, 245, 62]
+    content:
+      style: "$inverse"
+      align: [center, middle]
+      text: |
+        软件停车 ≠ 物理急停
+
+        当前没有完整真实任务闭环
+  - elementId: p9-page
+    elementType: text
+    bounds: [850, 492, 50, 18]
+    content:
+      style: "$muted"
+      align: [right, top]
+      text: 09 / 11
