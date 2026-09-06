@@ -1,0 +1,70 @@
+{
+  "name": "suixun-multiplatform-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "description": "穗巡多端离线展示应用",
+  "author": "穗巡项目团队",
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "desktop:dev": "npm run build && electron .",
+    "desktop:package": "npm run build && electron-builder",
+    "desktop:portable": "npm run build && electron-builder --win portable -c.artifactName='穗巡-展示应用-${version}-portable.${ext}'",
+    "mobile:sync": "npm run build && cap sync android",
+    "mobile:apk": "npm run mobile:sync && cd android && ./gradlew assembleDebug",
+    "mobile:open": "cap open android",
+    "check": "npm run build && node scripts/check-showcase.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "audit:security": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/cli": "^7.4.4",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^44.2.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "build": {
+    "appId": "cn.suixun.showcase",
+    "productName": "穗巡",
+    "artifactName": "穗巡-展示应用-${version}.${ext}",
+    "directories": {
+      "output": "release/desktop"
+    },
+    "files": [
+      "dist/**/*",
+      "desktop/**/*",
+      "public/brand/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "public/brand/suixun.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "穗巡"
+    }
+  }
+}

@@ -4,16 +4,26 @@
 import type { ForecastSlice } from "../inspection-engine";
 import type { InfectionRiskField, InfectionWindowParams, WeatherSeries } from "./types";
 
-/** 统计预报期内满足"适温 + 湿度达标 + 叶面湿润"的小时数，与所需湿润时长比较。 */
+/** 统计最长连续的"适温 + 湿度达标 + 叶面湿润"时段；无需水膜的病害仍须满足温湿条件。 */
 export function infectionWindowSatisfied(series: WeatherSeries, window: InfectionWindowParams): { satisfied: boolean; wetHours: number } {
-  let wetHours = 0;
+  let currentWetHours = 0, longestWetHours = 0, favorableHours = 0;
   for (const hourWeather of series) {
     const inTemperature = hourWeather.temperature >= window.tempMin && hourWeather.temperature <= window.tempMax;
     const humidityReached = hourWeather.humidity >= window.rhThreshold;
     const leafWet = hourWeather.leafWetness > 0;
-    if (inTemperature && humidityReached && leafWet) wetHours += 1;
+    const favorable = inTemperature && humidityReached;
+    if (favorable) favorableHours += 1;
+    if (favorable && leafWet) {
+      currentWetHours += 1;
+      longestWetHours = Math.max(longestWetHours, currentWetHours);
+    } else {
+      currentWetHours = 0;
+    }
   }
-  return { satisfied: wetHours >= window.dewHoursMin, wetHours };
+  const satisfied = window.dewHoursMin === 0
+    ? favorableHours > 0
+    : longestWetHours >= window.dewHoursMin;
+  return { satisfied, wetHours: longestWetHours };
 }
 
 /** 剂量-侵染概率：p = 1 - exp(-dose/k)。k 为剂量尺度（copies/m³），默认使告警阈值 5000 对应约 63% 侵染概率。 */

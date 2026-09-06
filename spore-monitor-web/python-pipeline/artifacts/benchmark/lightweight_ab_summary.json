@@ -1,0 +1,55 @@
+{
+  "title": "轻量化第一轮：重构扩散算法与高斯烟羽模型对比",
+  "generatedAt": "2026-09-06",
+  "sourceCommit": "dd6b6dc",
+  "experimentType": "synthetic_numerical_benchmark",
+  "baseline": "Gaussian plume (closed-form)",
+  "proposed": "Coarse Eulerian reworked dispersion core (offline analogue)",
+  "reference": "Fine-grid Eulerian solution",
+  "sourceArtifact": "../ab_results.json",
+  "config": {
+    "horizonsHours": [72, 120, 168],
+    "nObservations": 30,
+    "seed": 42,
+    "dxTruthMeters": 125,
+    "dxReworkedMeters": 250,
+    "sourceRateQ": 10000.0,
+    "windSpeedMetersPerSecond": 2.0,
+    "horizontalDiffusivityKappa": 10.0,
+    "evaluationSpace": "log10 concentration"
+  },
+  "rows": [
+    {
+      "horizonHours": 72,
+      "nObservations": 30,
+      "reworkedEulerianRmseLog10": 0.678261538549,
+      "reworkedEulerianBiasLog10": 0.370433052734,
+      "gaussianRmseLog10": 0.928102551818,
+      "gaussianBiasLog10": -0.728346248448,
+      "rmseImprovementPct": 26.919548144740
+    },
+    {
+      "horizonHours": 120,
+      "nObservations": 30,
+      "reworkedEulerianRmseLog10": 0.678713580117,
+      "reworkedEulerianBiasLog10": 0.371702715834,
+      "gaussianRmseLog10": 0.941004218685,
+      "gaussianBiasLog10": -0.743420667606,
+      "rmseImprovementPct": 27.873481686911
+    },
+    {
+      "horizonHours": 168,
+      "nObservations": 30,
+      "reworkedEulerianRmseLog10": 0.679012905187,
+      "reworkedEulerianBiasLog10": 0.372511835299,
+      "gaussianRmseLog10": 0.949207619139,
+      "gaussianBiasLog10": -0.752935261020,
+      "rmseImprovementPct": 28.465291312870
+    }
+  ],
+  "interpretation": {
+    "headline": "在本合成数值场设置下，重构 Eulerian 核心的 RMSE 比高斯烟羽低约 26.9%–28.5%。",
+    "scope": "该结果用于展示算法在受控数值参考场中的相对表现，不等同于田间预测准确率。",
+    "importantCaveat": "参考场与重构方法属于同一 Eulerian 数值模型族，且使用恒定风场；因此结果不能单独证明真实环境泛化能力。"
+  }
+}

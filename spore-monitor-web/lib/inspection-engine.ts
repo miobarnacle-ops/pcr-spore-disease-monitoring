@@ -566,7 +566,6 @@ function median(values: number[]) {
 export function qualityWeight(quality: PcrQuality) {
   if (quality === "valid") return 1;
   if (quality === "doubtful") return 0.48;
-  if (quality === "invalid") return 0.08;
   return 0;
 }
 
@@ -662,7 +661,12 @@ export function runForecast(polygon: Point[], planning: PlanningResult, baseline
     // 源播种：在粒子滤波估计的源位置叠加近源量级的浓度核（近源量级取自同族解析烟羽，保持模型一致性）。
     const source = options.source;
     const sigmaSeed = Math.max(1, gridStep);
-    const seedPeak = gaussianPlume(source.x, source.y, source.strength, weather.windSpeed, weather.windDirection, stability, source.x + 1, source.y);
+    const windRadians = weather.windDirection * Math.PI / 180;
+    const downwindX = Math.sin(windRadians), downwindY = -Math.cos(windRadians);
+    const seedPeak = gaussianPlume(
+      source.x, source.y, source.strength, weather.windSpeed, weather.windDirection, stability,
+      source.x + downwindX, source.y + downwindY,
+    );
     for (let index = 0; index < baseline.grid.length; index++) {
       const [gx, gy] = baseline.grid[index];
       const weight = Math.exp(-((gx - source.x) ** 2 + (gy - source.y) ** 2) / (2 * sigmaSeed ** 2));

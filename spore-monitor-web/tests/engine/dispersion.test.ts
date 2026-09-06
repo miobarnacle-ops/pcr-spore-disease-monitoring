@@ -55,9 +55,34 @@ test("particle filter rejects single observation (radial degeneracy) and estimat
 });
 
 test("extractObservations keeps valid/doubtful with concentration, drops pending/invalid/null", () => {
-  const observations = extractObservations(makeSamples());
+  const invalid = { ...makeSamples()[0], point_id: "invalid", pcr_qual: "invalid" as const, pcr_conc: 1234 };
+  const observations = extractObservations([...makeSamples(), invalid]);
   assert.equal(observations.length, 4);
   assert.ok(observations.every((obs) => obs.concentration > 0));
+  assert.ok(observations.every((obs) => obs.concentration !== 1234));
+});
+
+test("particle filter rejects invalid configuration instead of returning a fabricated source", () => {
+  const observations = [
+    { x: 10, y: 10, concentration: 1000, quality: 1 },
+    { x: 20, y: 20, concentration: 2000, quality: 1 },
+  ];
+  assert.throws(
+    () => estimateSource(observations, { minX: 0, maxX: 80, minY: 0, maxY: 50 }, 3.5, 135, "C", { particleCount: 0 }),
+    /particleCount/,
+  );
+});
+
+test("source confidence stays low when posterior position uncertainty spans much of the field", () => {
+  const observations = [[10, 10], [70, 10], [10, 40], [70, 40]].map(([x, y]) => ({
+    x, y, concentration: 1, quality: 1,
+  }));
+  const estimate = estimateSource(
+    observations,
+    { minX: 0, maxX: 80, minY: 0, maxY: 50 },
+    0.1, 0, "F", { particleCount: 4000, seed: 7 },
+  );
+  assert.equal(estimate.confidence, "low");
 });
 
 test("infection window: stripe rust satisfied on wet-cool series, rejected on dry series", () => {
@@ -69,6 +94,21 @@ test("infection window: stripe rust satisfied on wet-cool series, rejected on dr
   assert.equal(wet.satisfied, true);
   assert.equal(wet.wetHours, 24);
   assert.equal(dry.satisfied, false);
+});
+
+test("infection window requires a continuous wet period and keeps zero-dew diseases temperature/humidity gated", () => {
+  const stripe = INFECTION_WINDOWS.wheat_stripe_rust;
+  const interrupted = Array.from({ length: 12 }, (_, hour) => ({
+    hour,
+    temperature: 12,
+    humidity: 92,
+    leafWetness: hour % 2 === 0 ? 1 : 0,
+  }));
+  assert.deepEqual(infectionWindowSatisfied(interrupted, stripe), { satisfied: false, wetHours: 1 });
+  assert.equal(infectionWindowSatisfied(
+    [{ hour: 0, temperature: -5, humidity: 10, leafWetness: 0 }],
+    INFECTION_WINDOWS.wheat_powdery,
+  ).satisfied, false);
 });
 
 test("onset probability monotonic in dose, zero when window unsatisfied", () => {
@@ -118,6 +158,18 @@ test("buildPlumeField decays monotonically downwind and is deterministic", () =>
   assert.ok(Math.abs(slice.concentrations[col * slice.rows + row] - analytic) <= 1e-9 * Math.max(1, analytic));
   const again = buildPlumeField(source, baseline, 3.5, 0, "D", [72]);
   assert.deepEqual(again[72].concentrations, slice.concentrations);
+});
+
+test("source seeding affects forecasts for every cardinal wind direction", () => {
+  const planning = makePlanning();
+  const baseline = buildFusionField(FIELD_POLYGON, planning, makeSamples(), 50, 80);
+  const source = { x: 40, y: 25, strength: 5e5, logStrengthMean: 5.7, logStrengthStd: 0.4, sigmaX: 6, sigmaY: 6, confidence: "medium" as const, obsCount: 4 };
+  for (const windDirection of [0, 90, 180, 270]) {
+    const weather = makeWeather({ windDirection });
+    const plain = runForecast(FIELD_POLYGON, planning, baseline, weather, [1]);
+    const seeded = runForecast(FIELD_POLYGON, planning, baseline, weather, [1], { source });
+    assert.notDeepEqual(seeded[1].concentrations, plain[1].concentrations, `source had no effect at ${windDirection} degrees`);
+  }
 });
 
 test("compareModels reports aligned metrics for both models and is deterministic", () => {

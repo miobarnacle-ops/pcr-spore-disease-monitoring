@@ -1,7 +1,7 @@
 // 高斯烟羽对照场生成 + A/B 模型对比器。
 // 复活 inspection-engine.gaussianPlume 作为运行时对照组：
-// 同源、同风、同参数下"高斯烟羽 vs 欧拉引擎 vs PCR 实测点"，
-// 为比赛要求的"与现有技术差异度≥30%"提供可复现的量化证据。
+// 同源、同风条件下"高斯烟羽 vs 欧拉引擎 vs 当前 PCR 点"，
+// 结果仅用于回代拟合诊断；没有独立留出观测时不代表预测准确率。
 import { classifyStability, gaussianPlume, runForecast } from "../inspection-engine";
 import type { ForecastResult, ForecastSlice, FusionField, PlanningResult, Point, StabilityClass, WeatherParams } from "../inspection-engine";
 import type { AbComparisonResult, AbComparisonSlice, GridGeometry, ObservationPoint, SourceEstimate, SporeFateParams } from "./types";
@@ -45,7 +45,7 @@ function metrics(modelValues: number[], observations: ObservationPoint[]) {
 
 /**
  * 同条件 A/B 对比：欧拉引擎（含源播种）与解析烟羽在各预报期于 PCR 观测点处的
- * log10 RMSE / 偏差。两组指标使用同一组观测，可直接进报告表格。
+ * log10 RMSE / 偏差。观测也参与了源估计，因此这些指标属于回代诊断，不能作为独立预测准确率。
  */
 export function compareModels(
   source: SourceEstimate,

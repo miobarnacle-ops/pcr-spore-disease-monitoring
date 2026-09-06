@@ -18,7 +18,9 @@ import { mulberry32, standardNormal, uniform } from "./rng";
 export function extractObservations(samples: SamplingPoint[]): ObservationPoint[] {
   const valid = samples.filter(
     (sample): sample is SamplingPoint & { pcr_conc: number } =>
-      sample.pcr_conc != null && sample.pcr_conc > 0 && qualityWeight(sample.pcr_qual) > 0,
+      sample.pcr_conc != null
+      && sample.pcr_conc > 0
+      && (sample.pcr_qual === "valid" || sample.pcr_qual === "doubtful"),
   );
   return valid.map((sample) => ({
     x: sample.x_m,
@@ -48,11 +50,21 @@ export function estimateSource(
   config: ParticleFilterConfig = {},
 ): SourceEstimate {
   if (observations.length < 2) throw new Error("源项估计需要至少 2 个有效 PCR 观测点（单观测径向退化）。");
-  if (bounds.maxX <= bounds.minX || bounds.maxY <= bounds.minY) throw new Error("源搜索区域为空。");
+  if (![bounds.minX, bounds.maxX, bounds.minY, bounds.maxY].every(Number.isFinite)
+    || bounds.maxX <= bounds.minX || bounds.maxY <= bounds.minY) throw new Error("源搜索区域为空或包含非法坐标。");
+  if (!Number.isFinite(wind) || wind < 0 || !Number.isFinite(direction)) throw new Error("风速或风向参数非法。");
+  if (observations.some((obs) => !Number.isFinite(obs.x) || !Number.isFinite(obs.y)
+    || !Number.isFinite(obs.concentration) || obs.concentration <= 0
+    || !Number.isFinite(obs.quality) || obs.quality <= 0 || obs.quality > 1)) {
+    throw new Error("PCR 观测包含非法坐标、浓度或质量权重。");
+  }
 
   const particleCount = config.particleCount ?? 1000;
   const sigmaObsLog = config.sigmaObsLog ?? 0.3;
   const priorStrengthLogStd = config.priorStrengthLogStd ?? 1.5;
+  if (!Number.isInteger(particleCount) || particleCount <= 0) throw new Error("particleCount 必须是正整数。");
+  if (!Number.isFinite(sigmaObsLog) || sigmaObsLog <= 0) throw new Error("sigmaObsLog 必须为正数。");
+  if (!Number.isFinite(priorStrengthLogStd) || priorStrengthLogStd < 0) throw new Error("priorStrengthLogStd 不能为负数。");
   const seed = config.seed ?? 42;
   const rng = mulberry32(seed);
 
@@ -112,9 +124,13 @@ export function estimateSource(
   }
 
   const obsCount = observations.length;
+  const relativePositionUncertainty = Math.max(
+    Math.sqrt(varianceX) / (bounds.maxX - bounds.minX),
+    Math.sqrt(varianceY) / (bounds.maxY - bounds.minY),
+  );
   const confidence: SourceEstimate["confidence"] =
-    obsCount >= 4 && effectiveCount >= 0.5 * particleCount ? "high"
-    : obsCount >= 3 && effectiveCount >= 0.25 * particleCount ? "medium"
+    obsCount >= 4 && effectiveCount >= 0.5 * particleCount && relativePositionUncertainty <= 0.15 ? "high"
+    : obsCount >= 3 && effectiveCount >= 0.25 * particleCount && relativePositionUncertainty <= 0.25 ? "medium"
     : "low";
 
   return {

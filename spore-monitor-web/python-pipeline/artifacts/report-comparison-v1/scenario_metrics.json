@@ -1,0 +1,91 @@
+{
+  "title": "报告用现实化模拟对比数据 v1",
+  "generatedAt": "2026-09-06",
+  "dataStatus": "synthetic; not field observations",
+  "seed": 20260906,
+  "domainMeters": {
+    "x": [
+      -2000.0,
+      18000.0
+    ],
+    "y": [
+      -7000.0,
+      7000.0
+    ],
+    "gridStep": 250.0
+  },
+  "durationHours": 6.0,
+  "evaluation": "20 calibration sensors and 60 held-out sensors per scenario; metrics use held-out sensors only",
+  "referenceGenerator": "independent time-integrated Gaussian-puff ensemble with dynamic weather and fate",
+  "proposedModel": "coarse dynamic Eulerian offline analogue",
+  "baselineModel": "single steady Gaussian plume",
+  "scenarios": [
+    {
+      "scenarioId": "S1_steady_dry",
+      "scenarioName": "稳定风场（对照）",
+      "description": "近似稳定的东向输送、无降雨，用于检验简单条件下高斯烟羽是否仍具竞争力。",
+      "trainCount": 20,
+      "testCount": 60,
+      "reworkedScale": 0.4766964536671182,
+      "gaussianScale": 1.542553458305948,
+      "reworked": {
+        "rmseLog10": 0.7204807664413154,
+        "maeLog10": 0.45280636773294014,
+        "pearsonR": 0.9661378984003639,
+        "hotspotIoU": 0.9
+      },
+      "gaussian": {
+        "rmseLog10": 0.43673954372500556,
+        "maeLog10": 0.24389147660949526,
+        "pearsonR": 0.9884456413810327,
+        "hotspotIoU": 0.7777777777777778
+      },
+      "rmseImprovementPct": -64.9680631838935
+    },
+    {
+      "scenarioId": "S2_wind_shift",
+      "scenarioName": "风向转折",
+      "description": "六小时内风向由偏南转为偏北，形成弯折和叠加的传播带。",
+      "trainCount": 20,
+      "testCount": 60,
+      "reworkedScale": 0.18019235726732433,
+      "gaussianScale": 0.068819762799161,
+      "reworked": {
+        "rmseLog10": 1.4759444444220022,
+        "maeLog10": 0.9869656756199536,
+        "pearsonR": 0.8493440739577949,
+        "hotspotIoU": 0.5806451612903226
+      },
+      "gaussian": {
+        "rmseLog10": 3.4970297666568553,
+        "maeLog10": 2.6593693292258567,
+        "pearsonR": -0.3215611741510206,
+        "hotspotIoU": 0.029411764705882353
+      },
+      "rmseImprovementPct": 57.79434140095987
+    },
+    {
+      "scenarioId": "S3_rain_front",
+      "scenarioName": "风向变化与阵雨清除",
+      "description": "风向缓慢转折，中段出现约一小时阵雨，同时释放强度具有时段变化。",
+      "trainCount": 20,
+      "testCount": 60,
+      "reworkedScale": 0.19094176062780951,
+      "gaussianScale": 0.15338477322241423,
+      "reworked": {
+        "rmseLog10": 1.2671227057556438,
+        "maeLog10": 0.8080024956293396,
+        "pearsonR": 0.8792908176057125,
+        "hotspotIoU": 0.782608695652174
+      },
+      "gaussian": {
+        "rmseLog10": 3.2001697069275976,
+        "maeLog10": 2.2327167451279317,
+        "pearsonR": -0.052053855252971,
+        "hotspotIoU": 0.03125
+      },
+      "rmseImprovementPct": 60.404515328901844
+    }
+  ],
+  "disclosure": "Results demonstrate controlled synthetic-scenario behavior and must not be presented as real-field accuracy."
+}

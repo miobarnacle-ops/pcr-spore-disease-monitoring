@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">穗巡</string>
+    <string name="title_activity_main">穗巡</string>
+    <string name="package_name">cn.suixun.showcase</string>
+    <string name="custom_url_scheme">cn.suixun.showcase</string>
+</resources>
