@@ -15,6 +15,8 @@
 | `legacy-materials/` | 从历史总归档提取并脱敏后的可公开源码、报告和资料 |
 | `multiplatform-showcase/` | “穗巡”多端离线展示应用：Vite/React、Windows Electron、Android Capacitor、验收记录与发行包 |
 | `报告书撰写详细计划_三模块_2026-09-06.md`、`报告书三模块初稿_*.md` | 三模块报告写作基线、初稿、润色稿和自我审计记录 |
+| `report_assets/` | 报告图表、公式图、成员材料摘录和可复现的制图脚本 |
+| `spore-vehicle-nav/results/` | 单垄仿真与真实建图的精选地图、对比图和报告使用说明；原始录包不随源码默认下载 |
 
 ## 克隆
 
@@ -85,4 +87,4 @@ cd spore-vehicle-nav
 
 报告中要区分离线测试、Mock/Replay、Gazebo 仿真、树莓派静止链路、小尺度实车路线和正式场地/精度/采样联动验证。公开仓库保留证据材料，但不把仿真或离线通过写成比赛级实车结论。
 
-详见 `docs/RUNTIME_ENVIRONMENT_PUBLIC.md`、`docs/PUBLIC_UPLOAD_SCOPE.md`、`docs/INCREMENTAL_SYNC_2026-09-07.md` 和 `spore-vehicle-nav/HANDOVER_PUBLIC.md`。
+详见 `docs/RUNTIME_ENVIRONMENT_PUBLIC.md`、`docs/PUBLIC_UPLOAD_SCOPE.md`、`docs/INCREMENTAL_SYNC_2026-09-07.md`、`docs/INCREMENTAL_SYNC_2026-09-13.md` 和 `spore-vehicle-nav/HANDOVER_PUBLIC.md`。

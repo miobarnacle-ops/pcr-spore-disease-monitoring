@@ -21,7 +21,8 @@ spore-vehicle-nav/
 │   ├── spore_patrol_sim/                # Gazebo 模拟农田与仿真 SLAM 参数
 │   ├── ydlidar_ros2_driver/             # YDLIDAR ROS 2 驱动源码
 │   ├── spore_patrol_route_validation/   # 阶段 D
-│   └── spore_patrol_nav_bringup/       # 阶段 C
+│   ├── spore_patrol_nav_bringup/       # 阶段 C
+│   └── spore_patrol_teleop/             # 简洁 W/A/S/D 键盘遥控
 ├── maps/                 # 实机/现场地图归档
 ├── results/              # 测试/实车/仿真记录
 ├── tools/                # 地图保存、仿真和只读诊断工具
@@ -39,13 +40,17 @@ spore-vehicle-nav/
 2. 上车前由本人在树莓派 colcon build 并实车验证（架空轮、急停就绪、先只读后运动）。
 3. 进展同步回主计划 MD 的 §15 更新记录。
 
+首轮人工遥控建图可使用 `spore_patrol_teleop`。它只发布标准 `/cmd_vel`，不直接
+访问底盘串口；默认低速，输入停止或退出后自动发布零速度。详细按键和启动方式见
+[`src/spore_patrol_teleop/README.md`](src/spore_patrol_teleop/README.md)。
+
 车端硬件与定位栈可通过 `deploy/spore-vehicle-stack.service` 作为一个受监督
 的 systemd 服务运行。它启动底盘反馈、YDLIDAR、EKF 与 SLAM Toolbox，且不会
 启动路线跟踪或自行发布非零 `/cmd_vel`；这样树莓派重启后不会只剩下空容器。
 
 ## 状态（2026-09-04）
 
-- `spore_patrol_gnss` 已部署到树莓派 `/home/pi/spore_patrol_ws` 并完成 `enabled=false` 的启动检查；ATGM336H 串口必须在确认设备别名后再显式启用。当前 `/dev/ttyUSB0` 已被 X3 Pro 雷达占用，不能直接把该路径当作并行 GNSS 设备。
+- `spore_patrol_gnss` 已部署到树莓派 `<VEHICLE_WORKSPACE>` 并完成 `enabled=false` 的启动检查；ATGM336H 串口必须在确认设备别名后再显式启用。当前 `/dev/ttyUSB0` 已被 X3 Pro 雷达占用，不能直接把该路径当作并行 GNSS 设备。
 - 阶段 C/D 代码已落地；车端 `verify.sh` 通过 91 项路线/安全/GNSS 测试及 YAML 校验。
 - canonical 8×6 m 模拟农田已在独立 ROS 域 `42` 实际完成一次无 GUI 建图；9 航点闭环、地图/pose graph 保存、通用栅格和三垄几何验收通过。地图与原始日志已同步至
   `results/sim_farmland_8x6_20260831/`；实机/小花园正式地图和 rosbag 仍待完成。

@@ -57,6 +57,9 @@ const desktop = read("desktop/main.cjs");
 const appSource = read("src/App.tsx");
 
 const expectedVersion = packageJson.version;
+if (brand.includes('"/brand/') || brand.includes("'/brand/")) failures.push("桌面 Logo 不应使用 file:// 下会失效的绝对 /brand/ 路径");
+if (!brand.includes('logoSrc: "./brand/') || !brand.includes('logoMarkSrc: "./brand/')) failures.push("品牌 Logo 未使用相对资源路径");
+if (/['"]\/brand\//.test(distText)) failures.push("构建产物仍包含可能导致 Electron file:// 资源失效的绝对 /brand/ 路径");
 if (!brand.includes(`version: "${expectedVersion}"`)) failures.push("品牌配置版本与 package.json 不一致");
 if (!gradle.includes(`versionName "${expectedVersion}"`)) failures.push("Android versionName 与 package.json 不一致");
 if (!capacitor.includes('appName: "穗巡"')) failures.push("Capacitor 应用名不是“穗巡”");

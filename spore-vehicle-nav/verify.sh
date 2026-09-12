@@ -4,7 +4,7 @@
 set -u
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-echo "== [1/3] pytest: spore_patrol_route_validation =="
+echo "== [1/4] pytest: spore_patrol_route_validation =="
 PKG="$REPO_ROOT/src/spore_patrol_route_validation"
 if [ -d "$PKG/tests" ]; then
   ( cd "$PKG" && python3 -m pytest tests/ -q )
@@ -14,7 +14,7 @@ fi
 
 echo
 echo
-echo "== [2/3] pytest: spore_patrol_gnss =="
+echo "== [2/4] pytest: spore_patrol_gnss =="
 GNSS_PKG="$REPO_ROOT/src/spore_patrol_gnss"
 if [ -d "$GNSS_PKG/tests" ]; then
   ( cd "$GNSS_PKG" && python3 -m pytest tests/ -q )
@@ -25,7 +25,18 @@ else
 fi
 
 echo
-echo "== [3/3] YAML validation: vehicle packages =="
+echo "== [3/4] pytest: spore_patrol_teleop =="
+TELEOP_PKG="$REPO_ROOT/src/spore_patrol_teleop"
+if [ -d "$TELEOP_PKG/tests" ]; then
+  ( cd "$TELEOP_PKG" && python3 -m pytest tests/ -q )
+  python3 -m py_compile "$TELEOP_PKG"/spore_patrol_teleop/*.py
+  echo "OK   teleop Python syntax"
+else
+  echo "SKIP: no tests/ in $TELEOP_PKG"
+fi
+
+echo
+echo "== [4/4] YAML validation: vehicle packages =="
 for f in "$REPO_ROOT"/src/*/config/*.yaml; do
   [ -e "$f" ] || continue
   if python3 -c "import yaml,sys; yaml.safe_load(open('$f'))" 2>/dev/null; then

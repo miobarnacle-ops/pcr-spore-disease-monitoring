@@ -1,0 +1,5 @@
+run_id=real_single_ridge_filtered_final_20260912_220708
+status=FAILED_SCAN_MATCHING
+profile=rear_mask_135deg_range_2m_no_loop
+straight_speed=0.10mps
+headland_speed=0.05mps

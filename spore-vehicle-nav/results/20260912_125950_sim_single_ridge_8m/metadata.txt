@@ -1,0 +1,8 @@
+2026-09-12T12:59:50+08:00
+world=<REPO_ROOT>/spore-vehicle-nav/src/spore_patrol_sim/worlds/single_ridge_8m.world
+layout=<REPO_ROOT>/spore-vehicle-nav/src/spore_patrol_sim/config/single_ridge_layout.json
+slam_params=<REPO_ROOT>/spore-vehicle-nav/src/spore_patrol_sim/config/single_ridge_mapping.yaml
+mode=headless_gazebo_slam
+scene=single_ridge_4.8m_headland_1.6m
+motion_model=body_forward_with_heading
+drive=true

@@ -197,10 +197,15 @@ def main(argv: list[str] | None = None) -> int:
         layout = json.loads(args.layout.read_text(encoding="utf-8"))
         field = layout["field"]
         mapping = layout["mapping"]
+        # A single-ridge scene intentionally has an open floor.  Its saved
+        # map bounds are expected to cover the two drive lanes and the ridge,
+        # not the full empty simulation floor.  The canonical three-row layout
+        # has no override and therefore continues to use field.width_m.
+        validation_width = float(mapping.get("validation_width_m", field["width_m"]))
         structural_errors = validate_map(
             stats,
             field_length=float(field["length_m"]),
-            field_width=float(field["width_m"]),
+            field_width=validation_width,
             coverage_tolerance=float(mapping["coverage_tolerance_m"]),
             min_known_fraction=float(mapping["min_known_fraction"]),
             min_occupied_fraction=float(mapping["min_occupied_fraction"]),
